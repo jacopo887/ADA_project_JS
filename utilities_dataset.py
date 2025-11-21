@@ -1849,6 +1849,8 @@ def extract_timing_app_data(
     
     return timing_df_filtered
 
+# Function to align tire information and clean timing data
+
 def align_and_clean_timing_data(
     timing_df,
     output_csv_path=None,
@@ -1859,9 +1861,9 @@ def align_and_clean_timing_data(
     Align tire information and clean timing data by driver and stint.
     
     This function:
-    1. Forward fills Compound and TyresNotChanged within each Driver+Stint group
-    2. Creates LapInStint column from TotalLaps
-    3. Removes rows with missing critical data (Compound or TotalLaps)
+    1. Creates LapInStint column (calculated from actual lap numbers: CurrentLap - FirstLapInStint + 1)
+    2. Removes rows with missing critical data (Compound or TotalLaps)
+    3. Forward fills Compound and TyresNotChanged within each Driver+Stint group
     4. Creates per-driver lap counters
     5. Marks tire changes (New flag) at stint starts
     6. Converts TyresNotChanged to numeric type
@@ -1890,20 +1892,14 @@ def align_and_clean_timing_data(
     # Create a working copy to avoid modifying the original
     df = timing_df.copy()
     
-    # Step 1: Forward fill tire information within each Driver+Stint group
-
-    for (driver, stint), group_idx in df.groupby(['Driver', 'Stint']).groups.items():
-        # Forward fill Compound (identifies tire type - same throughout stint)
-        df.loc[group_idx, 'Compound'] = df.loc[group_idx, 'Compound'].ffill()
-        
-        # Forward fill TyresNotChanged (BEFORE filtering) to preserve tire state information
-        df.loc[group_idx, 'TyresNotChanged'] = df.loc[group_idx, 'TyresNotChanged'].ffill()
+    # Step 1: Calculate LapInStint based on actual lap numbers (no filling/filtering needed)
+    # For each Driver+Stint group, subtract the first lap number and add 1
+    # This way: if stint starts at lap 15, then lap 15→1, lap 16→2, lap 17→3, etc.
+    df['LapInStint'] = df.groupby(['Driver', 'Stint'])['TotalLaps'].transform(
+        lambda x: x - x.min() + 1
+    )
     
-
-    # Step 2: Create LapInStint column
-    df['LapInStint'] = df['TotalLaps']
-    
-    # Step 3: Remove rows with missing critical data
+    # Step 2: Remove rows with missing critical data
     rows_initial = len(df)
     
     # Drop rows with no useful data (no Compound AND no TotalLaps)
@@ -1920,7 +1916,15 @@ def align_and_clean_timing_data(
     ].copy()
     rows_after = len(df_clean)
     
-    # Step 4: Create per-driver lap counters  
+    # Step 3: Forward fill tire information within each Driver+Stint group
+    for (driver, stint), group_idx in df_clean.groupby(['Driver', 'Stint']).groups.items():
+        # Forward fill Compound (identifies tire type - same throughout stint)
+        df_clean.loc[group_idx, 'Compound'] = df_clean.loc[group_idx, 'Compound'].ffill()
+        
+        # Forward fill TyresNotChanged (BEFORE filtering) to preserve tire state information
+        df_clean.loc[group_idx, 'TyresNotChanged'] = df_clean.loc[group_idx, 'TyresNotChanged'].ffill()
+    
+    # Step 5: Create per-driver lap counters  
     df_clean['LapNumber'] = 0
     for driver in df_clean['Driver'].unique():
         driver_mask = df_clean['Driver'] == driver
@@ -1928,7 +1932,7 @@ def align_and_clean_timing_data(
         df_clean.loc[driver_indices, 'LapNumber'] = range(1, len(driver_indices) + 1)
     
     
-    # Step 5: Mark "New" tires only at stint start
+    # Step 6: Mark "New" tires only at stint start
     df_clean['New'] = False  # Initialize all as FALSE
     
     for (driver, stint), group_idx in df_clean.groupby(['Driver', 'Stint']).groups.items():
@@ -1939,18 +1943,18 @@ def align_and_clean_timing_data(
             df_clean.loc[first_idx, 'New'] = True
     
 
-    # Step 6: Convert TyresNotChanged to numeric
+    # Step 7: Convert TyresNotChanged to numeric
     df_clean['TyresNotChanged'] = pd.to_numeric(
         df_clean['TyresNotChanged'], 
         errors='coerce'
     ).fillna(1).astype(int)
     
 
-    # Step 7: Drop redundant columns
+    # Step 8: Drop redundant columns
     df_final = df_clean.drop(columns=drop_columns)
     
 
-    # Step 8: Save to CSV (if path provided)
+    # Step 9: Save to CSV (if path provided)
     if output_csv_path:
         df_final.to_csv(output_csv_path, index=False)
     
@@ -2725,6 +2729,7 @@ def combine_yearly_results(
         print("No files to combine!")
         return None
 
+# Cleaning the combined dataset and adding PitIn/PitOut indicators
 
 def clean_combined_data(
     df_combined,
@@ -2732,11 +2737,46 @@ def clean_combined_data(
 ):
     """
     Clean the combined dataset by removing unnecessary columns and reordering.
+    Adds PitIn/PitOut indicators based on stint changes.
     
     Input: Combined dataset with all columns
-    Output: Cleaned dataset with only modeling-relevant columns
+    Output: Cleaned dataset with only modeling-relevant columns + PitIn/PitOut flags
     """
     df_clean = df_combined.copy()
+    
+    # Rename race_name to Grand_Prix FIRST (before sorting/grouping)
+    if 'race_name' in df_clean.columns:
+        df_clean = df_clean.rename(columns={'race_name': 'Grand_Prix'})
+    
+    # Determine race column name (use whatever exists)
+    race_col = 'Grand_Prix' if 'Grand_Prix' in df_clean.columns else 'race_name'
+    
+    # Sort by driver and lap number to ensure correct ordering for pit stop detection
+    df_clean = df_clean.sort_values(['year', 'round', race_col, 'RacingNumber', 'lap_number']).reset_index(drop=True)
+    
+    # Create PitOut indicator: First lap of new stint (with fresh tires)
+    # PitOut = TRUE when LapInStint == 1 (first lap after pit stop)
+    if 'LapInStint' in df_clean.columns:
+        df_clean['PitOut'] = (df_clean['LapInStint'] == 1).astype(bool)
+    else:
+        df_clean['PitOut'] = False
+    
+    # Create PitIn indicator: Last lap before stint changes
+    # Compare current stint with next lap's stint for same driver
+    df_clean['PitIn'] = False
+    
+    # Group by driver (year, round, race, RacingNumber) to detect stint changes
+    for (year, rnd, gp, driver), group_idx in df_clean.groupby(['year', 'round', race_col, 'RacingNumber']).groups.items():
+        driver_data = df_clean.loc[group_idx].copy()
+        
+        # Shift Stint column to get next lap's stint
+        next_stint = driver_data['Stint'].shift(-1)
+        
+        # PitIn = TRUE when current Stint != next Stint (and next stint is not NaN)
+        pit_in_mask = (driver_data['Stint'] != next_stint) & (next_stint.notna())
+        
+        # Update PitIn for this driver
+        df_clean.loc[group_idx[pit_in_mask], 'PitIn'] = True
     
     # Remove unnecessary columns
     columns_to_drop = [
@@ -2746,17 +2786,13 @@ def clean_combined_data(
     ]
     df_clean = df_clean.drop(columns=[col for col in columns_to_drop if col in df_clean.columns])
     
-    # Rename race_name to Grand_Prix
-    if 'race_name' in df_clean.columns:
-        df_clean = df_clean.rename(columns={'race_name': 'Grand_Prix'})
-    
     # Reorder columns for better readability
     column_order = [
         'year', 'round', 'Grand_Prix', 'Name', 'RacingNumber', 'Team',
         'lap_number', 'LapTime', 'IntervalToPositionAhead', 'Position',
-        'Stint', 'Compound', 'New',
-        'AirTemp', 'Humidity', 'Pressure', 'TrackTemp', 'WindDirection', 'WindSpeed', 'Rainfall',
-        'any_violation', 'lap_clean'
+        'Stint', 'Compound', 'New','AirTemp', 'Humidity', 'Pressure', 
+        'TrackTemp', 'WindDirection', 'WindSpeed', 'Rainfall',
+        'any_violation', 'lap_clean','PitIn', 'PitOut'
     ]
     df_clean = df_clean[[col for col in column_order if col in df_clean.columns]]
     
@@ -2764,9 +2800,15 @@ def clean_combined_data(
     if 'Rainfall' in df_clean.columns:
         df_clean['Rainfall'] = df_clean['Rainfall'].astype('bool')
     
+    # Summary statistics
+    pit_in_count = df_clean['PitIn'].sum() if 'PitIn' in df_clean.columns else 0
+    pit_out_count = df_clean['PitOut'].sum() if 'PitOut' in df_clean.columns else 0
+    
     df_clean.to_excel(output_file, index=False)
     print(f"\nCleaned data saved to {output_file}")
     print(f"Total rows: {len(df_clean):,}")
+    print(f"PitIn laps: {pit_in_count:,}")
+    print(f"PitOut laps: {pit_out_count:,}")
     print(f"Final columns ({len(df_clean.columns)}): {list(df_clean.columns)}")
     
     return df_clean
