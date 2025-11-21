@@ -1521,7 +1521,7 @@ def discover_races_in_cache(cache_dir='cache', years=None, session_type='Race'):
     return discovered_races
 
 
-def build_race_output_dir(race_info, base_output='csv_output', create_dir=True):
+def build_race_output_dir(race_info, base_output='csv_output', create_dir=False):
     """
     Build organized output directory structure for a race.
     
@@ -2781,7 +2781,7 @@ def clean_combined_data(
     # Remove unnecessary columns
     columns_to_drop = [
         'name', 'countryId', 'Time', 'NumberOfPitStops', 'TyresNotChanged',
-        'LapInStint', 'track_limit', 'off_track', 'message', 'flag_upper',
+        'track_limit', 'off_track', 'message', 'flag_upper',
         'sc_deploy', 'sc_end', 'vsc_deploy', 'vsc_end', 'is_yellow', 'is_double_yellow', 'is_red'
     ]
     df_clean = df_clean.drop(columns=[col for col in columns_to_drop if col in df_clean.columns])
@@ -2790,7 +2790,7 @@ def clean_combined_data(
     column_order = [
         'year', 'round', 'Grand_Prix', 'Name', 'RacingNumber', 'Team',
         'lap_number', 'LapTime', 'IntervalToPositionAhead', 'Position',
-        'Stint', 'Compound', 'New','AirTemp', 'Humidity', 'Pressure', 
+        'Stint', 'Compound', 'New','LapInStint', 'AirTemp', 'Humidity', 'Pressure', 
         'TrackTemp', 'WindDirection', 'WindSpeed', 'Rainfall',
         'any_violation', 'lap_clean','PitIn', 'PitOut'
     ]
