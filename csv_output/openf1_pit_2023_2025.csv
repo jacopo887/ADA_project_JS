@@ -1,0 +1,2271 @@
+season_year,grand_prix,driver_number,lap_number
+2023,Catalunya,4,1.0
+2023,Catalunya,77,5.0
+2023,Catalunya,27,8.0
+2023,Catalunya,24,9.0
+2023,Catalunya,21,9.0
+2023,Catalunya,22,10.0
+2023,Catalunya,20,10.0
+2023,Catalunya,31,13.0
+2023,Catalunya,18,14.0
+2023,Catalunya,55,15.0
+2023,Catalunya,16,16.0
+2023,Catalunya,23,16.0
+2023,Catalunya,81,17.0
+2023,Catalunya,2,17.0
+2023,Catalunya,14,19.0
+2023,Catalunya,10,19.0
+2023,Catalunya,4,22.0
+2023,Catalunya,44,24.0
+2023,Catalunya,20,24.0
+2023,Catalunya,63,25.0
+2023,Catalunya,1,26.0
+2023,Catalunya,27,26.0
+2023,Catalunya,11,27.0
+2023,Catalunya,18,34.0
+2023,Catalunya,22,34.0
+2023,Catalunya,31,35.0
+2023,Catalunya,24,36.0
+2023,Catalunya,2,36.0
+2023,Catalunya,23,37.0
+2023,Catalunya,21,38.0
+2023,Catalunya,81,39.0
+2023,Catalunya,10,39.0
+2023,Catalunya,77,39.0
+2023,Catalunya,55,41.0
+2023,Catalunya,16,41.0
+2023,Catalunya,20,42.0
+2023,Catalunya,27,43.0
+2023,Catalunya,14,44.0
+2023,Catalunya,63,45.0
+2023,Catalunya,44,50.0
+2023,Catalunya,11,50.0
+2023,Catalunya,4,50.0
+2023,Catalunya,1,52.0
+2023,Montreal,22,1.0
+2023,Montreal,10,10.0
+2023,Montreal,27,11.0
+2023,Montreal,18,11.0
+2023,Montreal,21,11.0
+2023,Montreal,1,12.0
+2023,Montreal,44,12.0
+2023,Montreal,14,12.0
+2023,Montreal,31,12.0
+2023,Montreal,81,12.0
+2023,Montreal,4,12.0
+2023,Montreal,23,12.0
+2023,Montreal,24,12.0
+2023,Montreal,63,12.0
+2023,Montreal,18,27.0
+2023,Montreal,27,31.0
+2023,Montreal,24,32.0
+2023,Montreal,10,33.0
+2023,Montreal,22,34.0
+2023,Montreal,4,35.0
+2023,Montreal,20,35.0
+2023,Montreal,31,36.0
+2023,Montreal,77,36.0
+2023,Montreal,11,37.0
+2023,Montreal,81,37.0
+2023,Montreal,55,38.0
+2023,Montreal,16,39.0
+2023,Montreal,44,40.0
+2023,Montreal,14,41.0
+2023,Montreal,1,42.0
+2023,Montreal,21,50.0
+2023,Montreal,20,53.0
+2023,Montreal,11,68.0
+2023,Spielberg,20,1.0
+2023,Spielberg,22,1.0
+2023,Spielberg,1,2.0
+2023,Spielberg,16,2.0
+2023,Spielberg,55,2.0
+2023,Spielberg,44,2.0
+2023,Spielberg,4,2.0
+2023,Spielberg,14,2.0
+2023,Spielberg,27,2.0
+2023,Spielberg,18,2.0
+2023,Spielberg,10,2.0
+2023,Spielberg,23,2.0
+2023,Spielberg,63,2.0
+2023,Spielberg,31,2.0
+2023,Spielberg,11,2.0
+2023,Spielberg,24,2.0
+2023,Spielberg,81,2.0
+2023,Spielberg,2,2.0
+2023,Spielberg,77,2.0
+2023,Spielberg,21,2.0
+2023,Spielberg,22,2.0
+2023,Spielberg,20,2.0
+2023,Spielberg,24,8.0
+2023,Spielberg,27,11.0
+2023,Spielberg,21,12.0
+2023,Spielberg,44,14.0
+2023,Spielberg,4,14.0
+2023,Spielberg,10,14.0
+2023,Spielberg,23,14.0
+2023,Spielberg,63,14.0
+2023,Spielberg,31,14.0
+2023,Spielberg,81,14.0
+2023,Spielberg,2,14.0
+2023,Spielberg,16,15.0
+2023,Spielberg,55,15.0
+2023,Spielberg,14,15.0
+2023,Spielberg,18,15.0
+2023,Spielberg,77,21.0
+2023,Spielberg,81,22.0
+2023,Spielberg,22,23.0
+2023,Spielberg,1,24.0
+2023,Spielberg,11,25.0
+2023,Spielberg,20,34.0
+2023,Spielberg,18,36.0
+2023,Spielberg,21,37.0
+2023,Spielberg,24,38.0
+2023,Spielberg,31,40.0
+2023,Spielberg,77,40.0
+2023,Spielberg,4,41.0
+2023,Spielberg,63,41.0
+2023,Spielberg,23,41.0
+2023,Spielberg,81,41.0
+2023,Spielberg,44,42.0
+2023,Spielberg,2,43.0
+2023,Spielberg,22,43.0
+2023,Spielberg,14,44.0
+2023,Spielberg,10,44.0
+2023,Spielberg,55,45.0
+2023,Spielberg,16,47.0
+2023,Spielberg,1,49.0
+2023,Spielberg,11,50.0
+2023,Spielberg,18,54.0
+2023,Spielberg,1,69.0
+2023,Silverstone,27,7.0
+2023,Silverstone,22,14.0
+2023,Silverstone,16,18.0
+2023,Silverstone,24,24.0
+2023,Silverstone,55,26.0
+2023,Silverstone,21,27.0
+2023,Silverstone,63,28.0
+2023,Silverstone,11,28.0
+2023,Silverstone,81,29.0
+2023,Silverstone,2,29.0
+2023,Silverstone,10,31.0
+2023,Silverstone,18,31.0
+2023,Silverstone,23,32.0
+2023,Silverstone,16,32.0
+2023,Silverstone,77,32.0
+2023,Silverstone,22,32.0
+2023,Silverstone,21,32.0
+2023,Silverstone,27,32.0
+2023,Silverstone,1,33.0
+2023,Silverstone,4,33.0
+2023,Silverstone,44,33.0
+2023,Silverstone,14,33.0
+2023,Silverstone,24,33.0
+2023,Silverstone,24,36.0
+2023,Hungaroring,23,8.0
+2023,Hungaroring,18,9.0
+2023,Hungaroring,77,9.0
+2023,Hungaroring,22,9.0
+2023,Hungaroring,24,10.0
+2023,Hungaroring,2,13.0
+2023,Hungaroring,20,14.0
+2023,Hungaroring,55,15.0
+2023,Hungaroring,44,16.0
+2023,Hungaroring,27,16.0
+2023,Hungaroring,4,17.0
+2023,Hungaroring,16,17.0
+2023,Hungaroring,81,18.0
+2023,Hungaroring,3,18.0
+2023,Hungaroring,14,20.0
+2023,Hungaroring,1,23.0
+2023,Hungaroring,11,24.0
+2023,Hungaroring,63,28.0
+2023,Hungaroring,3,29.0
+2023,Hungaroring,23,31.0
+2023,Hungaroring,18,34.0
+2023,Hungaroring,2,34.0
+2023,Hungaroring,27,38.0
+2023,Hungaroring,24,38.0
+2023,Hungaroring,77,40.0
+2023,Hungaroring,20,41.0
+2023,Hungaroring,81,42.0
+2023,Hungaroring,11,42.0
+2023,Hungaroring,16,43.0
+2023,Hungaroring,14,43.0
+2023,Hungaroring,4,44.0
+2023,Hungaroring,55,44.0
+2023,Hungaroring,22,44.0
+2023,Hungaroring,63,46.0
+2023,Hungaroring,44,49.0
+2023,Hungaroring,1,51.0
+2023,Spa-Francorchamps,4,5.0
+2023,Spa-Francorchamps,3,5.0
+2023,Spa-Francorchamps,20,5.0
+2023,Spa-Francorchamps,31,6.0
+2023,Spa-Francorchamps,77,6.0
+2023,Spa-Francorchamps,23,7.0
+2023,Spa-Francorchamps,55,7.0
+2023,Spa-Francorchamps,24,7.0
+2023,Spa-Francorchamps,2,8.0
+2023,Spa-Francorchamps,22,9.0
+2023,Spa-Francorchamps,14,10.0
+2023,Spa-Francorchamps,44,12.0
+2023,Spa-Francorchamps,27,12.0
+2023,Spa-Francorchamps,11,13.0
+2023,Spa-Francorchamps,16,13.0
+2023,Spa-Francorchamps,1,14.0
+2023,Spa-Francorchamps,4,17.0
+2023,Spa-Francorchamps,18,20.0
+2023,Spa-Francorchamps,63,22.0
+2023,Spa-Francorchamps,3,22.0
+2023,Spa-Francorchamps,23,23.0
+2023,Spa-Francorchamps,10,23.0
+2023,Spa-Francorchamps,22,24.0
+2023,Spa-Francorchamps,77,24.0
+2023,Spa-Francorchamps,27,24.0
+2023,Spa-Francorchamps,2,24.0
+2023,Spa-Francorchamps,31,25.0
+2023,Spa-Francorchamps,20,25.0
+2023,Spa-Francorchamps,24,25.0
+2023,Spa-Francorchamps,44,27.0
+2023,Spa-Francorchamps,16,28.0
+2023,Spa-Francorchamps,11,29.0
+2023,Spa-Francorchamps,14,29.0
+2023,Spa-Francorchamps,1,30.0
+2023,Spa-Francorchamps,23,33.0
+2023,Spa-Francorchamps,2,34.0
+2023,Spa-Francorchamps,44,42.0
+2023,Zandvoort,11,1.0
+2023,Zandvoort,24,1.0
+2023,Zandvoort,10,1.0
+2023,Zandvoort,16,1.0
+2023,Zandvoort,22,1.0
+2023,Zandvoort,20,1.0
+2023,Zandvoort,40,1.0
+2023,Zandvoort,1,2.0
+2023,Zandvoort,14,2.0
+2023,Zandvoort,55,2.0
+2023,Zandvoort,31,2.0
+2023,Zandvoort,4,3.0
+2023,Zandvoort,44,3.0
+2023,Zandvoort,63,4.0
+2023,Zandvoort,18,4.0
+2023,Zandvoort,20,9.0
+2023,Zandvoort,44,9.0
+2023,Zandvoort,18,9.0
+2023,Zandvoort,24,10.0
+2023,Zandvoort,14,10.0
+2023,Zandvoort,55,10.0
+2023,Zandvoort,22,10.0
+2023,Zandvoort,31,10.0
+2023,Zandvoort,4,10.0
+2023,Zandvoort,40,10.0
+2023,Zandvoort,63,10.0
+2023,Zandvoort,1,11.0
+2023,Zandvoort,10,11.0
+2023,Zandvoort,16,11.0
+2023,Zandvoort,11,12.0
+2023,Zandvoort,81,15.0
+2023,Zandvoort,77,16.0
+2023,Zandvoort,27,16.0
+2023,Zandvoort,63,16.0
+2023,Zandvoort,18,16.0
+2023,Zandvoort,40,17.0
+2023,Zandvoort,18,34.0
+2023,Zandvoort,20,35.0
+2023,Zandvoort,24,37.0
+2023,Zandvoort,55,41.0
+2023,Zandvoort,4,42.0
+2023,Zandvoort,31,43.0
+2023,Zandvoort,23,44.0
+2023,Zandvoort,11,45.0
+2023,Zandvoort,44,45.0
+2023,Zandvoort,10,46.0
+2023,Zandvoort,81,46.0
+2023,Zandvoort,40,46.0
+2023,Zandvoort,77,47.0
+2023,Zandvoort,14,48.0
+2023,Zandvoort,27,48.0
+2023,Zandvoort,1,49.0
+2023,Zandvoort,77,59.0
+2023,Zandvoort,40,59.0
+2023,Zandvoort,11,60.0
+2023,Zandvoort,10,60.0
+2023,Zandvoort,55,60.0
+2023,Zandvoort,44,60.0
+2023,Zandvoort,4,60.0
+2023,Zandvoort,63,60.0
+2023,Zandvoort,81,60.0
+2023,Zandvoort,22,60.0
+2023,Zandvoort,24,60.0
+2023,Zandvoort,18,60.0
+2023,Zandvoort,27,60.0
+2023,Zandvoort,1,61.0
+2023,Zandvoort,20,60.0
+2023,Zandvoort,14,61.0
+2023,Zandvoort,23,61.0
+2023,Zandvoort,31,61.0
+2023,Zandvoort,1,63.0
+2023,Zandvoort,11,63.0
+2023,Zandvoort,4,63.0
+2023,Zandvoort,63,63.0
+2023,Zandvoort,23,63.0
+2023,Zandvoort,81,63.0
+2023,Zandvoort,31,63.0
+2023,Zandvoort,22,63.0
+2023,Zandvoort,18,63.0
+2023,Zandvoort,27,63.0
+2023,Zandvoort,77,63.0
+2023,Zandvoort,40,63.0
+2023,Zandvoort,20,63.0
+2023,Zandvoort,1,64.0
+2023,Zandvoort,14,64.0
+2023,Zandvoort,11,64.0
+2023,Zandvoort,10,64.0
+2023,Zandvoort,55,64.0
+2023,Zandvoort,44,64.0
+2023,Zandvoort,4,64.0
+2023,Zandvoort,63,64.0
+2023,Zandvoort,23,64.0
+2023,Zandvoort,81,64.0
+2023,Zandvoort,31,64.0
+2023,Zandvoort,22,64.0
+2023,Zandvoort,18,64.0
+2023,Zandvoort,27,64.0
+2023,Zandvoort,77,64.0
+2023,Zandvoort,40,64.0
+2023,Zandvoort,20,64.0
+2023,Zandvoort,63,67.0
+2023,Monza,10,10.0
+2023,Monza,24,11.0
+2023,Monza,20,12.0
+2023,Monza,40,13.0
+2023,Monza,2,14.0
+2023,Monza,27,14.0
+2023,Monza,23,15.0
+2023,Monza,55,19.0
+2023,Monza,63,19.0
+2023,Monza,1,20.0
+2023,Monza,16,20.0
+2023,Monza,18,20.0
+2023,Monza,11,21.0
+2023,Monza,14,21.0
+2023,Monza,4,22.0
+2023,Monza,81,23.0
+2023,Monza,31,24.0
+2023,Monza,77,25.0
+2023,Monza,44,27.0
+2023,Monza,10,31.0
+2023,Monza,40,33.0
+2023,Monza,24,33.0
+2023,Monza,20,33.0
+2023,Monza,27,39.0
+2023,Monza,81,41.0
+2023,Singapore,24,2.0
+2023,Singapore,2,19.0
+2023,Singapore,55,20.0
+2023,Singapore,63,20.0
+2023,Singapore,4,20.0
+2023,Singapore,16,20.0
+2023,Singapore,44,20.0
+2023,Singapore,14,20.0
+2023,Singapore,31,20.0
+2023,Singapore,20,20.0
+2023,Singapore,10,20.0
+2023,Singapore,81,20.0
+2023,Singapore,40,20.0
+2023,Singapore,27,20.0
+2023,Singapore,23,20.0
+2023,Singapore,24,20.0
+2023,Singapore,11,39.0
+2023,Singapore,1,40.0
+2023,Singapore,77,40.0
+2023,Singapore,23,43.0
+2023,Singapore,20,43.0
+2023,Singapore,2,43.0
+2023,Singapore,63,44.0
+2023,Singapore,44,44.0
+2023,Singapore,14,44.0
+2023,Suzuka,31,1.0
+2023,Suzuka,24,1.0
+2023,Suzuka,23,1.0
+2023,Suzuka,77,1.0
+2023,Suzuka,11,2.0
+2023,Suzuka,2,2.0
+2023,Suzuka,2,5.0
+2023,Suzuka,77,6.0
+2023,Suzuka,27,8.0
+2023,Suzuka,22,9.0
+2023,Suzuka,40,10.0
+2023,Suzuka,24,10.0
+2023,Suzuka,14,11.0
+2023,Suzuka,20,12.0
+2023,Suzuka,11,12.0
+2023,Suzuka,81,13.0
+2023,Suzuka,23,13.0
+2023,Suzuka,18,14.0
+2023,Suzuka,1,16.0
+2023,Suzuka,44,16.0
+2023,Suzuka,4,17.0
+2023,Suzuka,16,17.0
+2023,Suzuka,55,18.0
+2023,Suzuka,10,18.0
+2023,Suzuka,27,21.0
+2023,Suzuka,2,21.0
+2023,Suzuka,63,24.0
+2023,Suzuka,14,25.0
+2023,Suzuka,40,25.0
+2023,Suzuka,31,28.0
+2023,Suzuka,24,29.0
+2023,Suzuka,22,30.0
+2023,Suzuka,20,31.0
+2023,Suzuka,16,34.0
+2023,Suzuka,44,34.0
+2023,Suzuka,10,34.0
+2023,Suzuka,81,35.0
+2023,Suzuka,4,36.0
+2023,Suzuka,1,37.0
+2023,Suzuka,27,37.0
+2023,Suzuka,55,38.0
+2023,Suzuka,11,13.0
+2023,Suzuka,11,14.0
+2023,Lusail,63,1.0
+2023,Lusail,77,3.0
+2023,Lusail,20,3.0
+2023,Lusail,18,3.0
+2023,Lusail,40,3.0
+2023,Lusail,22,9.0
+2023,Lusail,31,10.0
+2023,Lusail,14,11.0
+2023,Lusail,10,11.0
+2023,Lusail,81,12.0
+2023,Lusail,16,12.0
+2023,Lusail,4,13.0
+2023,Lusail,2,13.0
+2023,Lusail,27,13.0
+2023,Lusail,63,14.0
+2023,Lusail,1,17.0
+2023,Lusail,11,17.0
+2023,Lusail,23,18.0
+2023,Lusail,24,18.0
+2023,Lusail,77,21.0
+2023,Lusail,18,21.0
+2023,Lusail,20,21.0
+2023,Lusail,40,21.0
+2023,Lusail,22,22.0
+2023,Lusail,81,25.0
+2023,Lusail,16,25.0
+2023,Lusail,31,25.0
+2023,Lusail,14,26.0
+2023,Lusail,10,26.0
+2023,Lusail,2,26.0
+2023,Lusail,4,27.0
+2023,Lusail,27,27.0
+2023,Lusail,11,31.0
+2023,Lusail,23,31.0
+2023,Lusail,63,32.0
+2023,Lusail,1,34.0
+2023,Lusail,24,35.0
+2023,Lusail,77,39.0
+2023,Lusail,18,39.0
+2023,Lusail,20,39.0
+2023,Lusail,40,39.0
+2023,Lusail,27,39.0
+2023,Lusail,22,40.0
+2023,Lusail,81,43.0
+2023,Lusail,16,43.0
+2023,Lusail,31,43.0
+2023,Lusail,11,43.0
+2023,Lusail,4,44.0
+2023,Lusail,14,44.0
+2023,Lusail,10,44.0
+2023,Lusail,23,44.0
+2023,Lusail,63,50.0
+2023,Lusail,1,51.0
+2023,Lusail,24,52.0
+2023,Austin,24,9.0
+2023,Austin,23,10.0
+2023,Austin,77,10.0
+2023,Austin,20,10.0
+2023,Austin,2,11.0
+2023,Austin,1,16.0
+2023,Austin,4,17.0
+2023,Austin,55,17.0
+2023,Austin,11,17.0
+2023,Austin,22,17.0
+2023,Austin,10,18.0
+2023,Austin,14,19.0
+2023,Austin,27,19.0
+2023,Austin,44,20.0
+2023,Austin,18,20.0
+2023,Austin,63,21.0
+2023,Austin,3,22.0
+2023,Austin,16,23.0
+2023,Austin,24,27.0
+2023,Austin,77,28.0
+2023,Austin,23,29.0
+2023,Austin,20,29.0
+2023,Austin,2,32.0
+2023,Austin,4,34.0
+2023,Austin,22,34.0
+2023,Austin,27,34.0
+2023,Austin,1,35.0
+2023,Austin,55,35.0
+2023,Austin,11,37.0
+2023,Austin,10,37.0
+2023,Austin,44,38.0
+2023,Austin,63,39.0
+2023,Austin,18,40.0
+2023,Austin,14,42.0
+2023,Austin,3,47.0
+2023,Austin,22,54.0
+2023,Mexico City,22,9.0
+2023,Mexico City,4,11.0
+2023,Mexico City,1,19.0
+2023,Mexico City,24,21.0
+2023,Mexico City,2,22.0
+2023,Mexico City,27,23.0
+2023,Mexico City,20,23.0
+2023,Mexico City,44,24.0
+2023,Mexico City,81,25.0
+2023,Mexico City,63,26.0
+2023,Mexico City,3,27.0
+2023,Mexico City,10,28.0
+2023,Mexico City,14,29.0
+2023,Mexico City,55,30.0
+2023,Mexico City,18,30.0
+2023,Mexico City,16,31.0
+2023,Mexico City,77,31.0
+2023,Mexico City,1,33.0
+2023,Mexico City,4,33.0
+2023,Mexico City,23,33.0
+2023,Mexico City,1,34.0
+2023,Mexico City,16,34.0
+2023,Mexico City,44,34.0
+2023,Mexico City,55,34.0
+2023,Mexico City,3,34.0
+2023,Mexico City,81,34.0
+2023,Mexico City,63,34.0
+2023,Mexico City,22,34.0
+2023,Mexico City,27,34.0
+2023,Mexico City,4,34.0
+2023,Mexico City,10,34.0
+2023,Mexico City,23,34.0
+2023,Mexico City,24,34.0
+2023,Mexico City,31,34.0
+2023,Mexico City,2,34.0
+2023,Mexico City,77,34.0
+2023,Mexico City,18,34.0
+2023,Mexico City,14,34.0
+2023,Interlagos,1,1.0
+2023,Interlagos,4,1.0
+2023,Interlagos,44,1.0
+2023,Interlagos,14,1.0
+2023,Interlagos,18,1.0
+2023,Interlagos,63,1.0
+2023,Interlagos,11,1.0
+2023,Interlagos,55,1.0
+2023,Interlagos,31,1.0
+2023,Interlagos,22,1.0
+2023,Interlagos,10,1.0
+2023,Interlagos,77,1.0
+2023,Interlagos,24,1.0
+2023,Interlagos,2,1.0
+2023,Interlagos,27,1.0
+2023,Interlagos,1,2.0
+2023,Interlagos,4,2.0
+2023,Interlagos,44,2.0
+2023,Interlagos,14,2.0
+2023,Interlagos,18,2.0
+2023,Interlagos,63,2.0
+2023,Interlagos,11,2.0
+2023,Interlagos,55,2.0
+2023,Interlagos,31,2.0
+2023,Interlagos,22,2.0
+2023,Interlagos,10,2.0
+2023,Interlagos,77,2.0
+2023,Interlagos,24,2.0
+2023,Interlagos,2,2.0
+2023,Interlagos,27,2.0
+2023,Interlagos,81,1.0
+2023,Interlagos,3,1.0
+2023,Interlagos,81,2.0
+2023,Interlagos,3,2.0
+2023,Interlagos,31,14.0
+2023,Interlagos,24,15.0
+2023,Interlagos,2,17.0
+2023,Interlagos,44,18.0
+2023,Interlagos,77,18.0
+2023,Interlagos,63,19.0
+2023,Interlagos,11,20.0
+2023,Interlagos,27,21.0
+2023,Interlagos,18,22.0
+2023,Interlagos,14,25.0
+2023,Interlagos,81,24.0
+2023,Interlagos,55,26.0
+2023,Interlagos,10,26.0
+2023,Interlagos,22,26.0
+2023,Interlagos,1,27.0
+2023,Interlagos,4,27.0
+2023,Interlagos,3,26.0
+2023,Interlagos,31,31.0
+2023,Interlagos,2,44.0
+2023,Interlagos,63,45.0
+2023,Interlagos,11,46.0
+2023,Interlagos,44,46.0
+2023,Interlagos,10,46.0
+2023,Interlagos,27,46.0
+2023,Interlagos,14,47.0
+2023,Interlagos,55,51.0
+2023,Interlagos,31,51.0
+2023,Interlagos,18,52.0
+2023,Interlagos,81,52.0
+2023,Interlagos,22,55.0
+2023,Interlagos,1,56.0
+2023,Interlagos,3,55.0
+2023,Interlagos,4,59.0
+2023,Las Vegas,11,1.0
+2023,Las Vegas,14,1.0
+2023,Las Vegas,77,1.0
+2023,Las Vegas,18,3.0
+2023,Las Vegas,55,3.0
+2023,Las Vegas,22,10.0
+2023,Las Vegas,27,12.0
+2023,Las Vegas,20,14.0
+2023,Las Vegas,63,15.0
+2023,Las Vegas,2,15.0
+2023,Las Vegas,1,16.0
+2023,Las Vegas,23,16.0
+2023,Las Vegas,81,16.0
+2023,Las Vegas,10,17.0
+2023,Las Vegas,3,17.0
+2023,Las Vegas,44,17.0
+2023,Las Vegas,31,20.0
+2023,Las Vegas,16,21.0
+2023,Las Vegas,22,21.0
+2023,Las Vegas,77,24.0
+2023,Las Vegas,11,26.0
+2023,Las Vegas,1,26.0
+2023,Las Vegas,18,26.0
+2023,Las Vegas,63,26.0
+2023,Las Vegas,55,26.0
+2023,Las Vegas,14,26.0
+2023,Las Vegas,24,26.0
+2023,Las Vegas,20,26.0
+2023,Las Vegas,27,26.0
+2023,Las Vegas,44,26.0
+2023,Las Vegas,81,43.0
+2023,Yas Marina Circuit,20,5.0
+2023,Yas Marina Circuit,3,7.0
+2023,Yas Marina Circuit,14,12.0
+2023,Yas Marina Circuit,81,13.0
+2023,Yas Marina Circuit,27,13.0
+2023,Yas Marina Circuit,24,13.0
+2023,Yas Marina Circuit,63,14.0
+2023,Yas Marina Circuit,4,14.0
+2023,Yas Marina Circuit,44,15.0
+2023,Yas Marina Circuit,31,15.0
+2023,Yas Marina Circuit,2,15.0
+2023,Yas Marina Circuit,1,16.0
+2023,Yas Marina Circuit,23,16.0
+2023,Yas Marina Circuit,16,17.0
+2023,Yas Marina Circuit,11,17.0
+2023,Yas Marina Circuit,10,17.0
+2023,Yas Marina Circuit,22,22.0
+2023,Yas Marina Circuit,18,22.0
+2023,Yas Marina Circuit,20,22.0
+2023,Yas Marina Circuit,55,23.0
+2023,Yas Marina Circuit,77,29.0
+2023,Yas Marina Circuit,3,31.0
+2023,Yas Marina Circuit,10,32.0
+2023,Yas Marina Circuit,4,33.0
+2023,Yas Marina Circuit,27,33.0
+2023,Yas Marina Circuit,63,34.0
+2023,Yas Marina Circuit,16,35.0
+2023,Yas Marina Circuit,44,35.0
+2023,Yas Marina Circuit,81,36.0
+2023,Yas Marina Circuit,14,36.0
+2023,Yas Marina Circuit,24,37.0
+2023,Yas Marina Circuit,2,41.0
+2023,Yas Marina Circuit,11,42.0
+2023,Yas Marina Circuit,18,42.0
+2023,Yas Marina Circuit,1,43.0
+2023,Yas Marina Circuit,23,43.0
+2023,Yas Marina Circuit,55,56.0
+2024,Sakhir,27,1.0
+2024,Sakhir,24,9.0
+2024,Sakhir,18,9.0
+2024,Sakhir,31,10.0
+2024,Sakhir,2,10.0
+2024,Sakhir,63,11.0
+2024,Sakhir,16,11.0
+2024,Sakhir,20,11.0
+2024,Sakhir,11,12.0
+2024,Sakhir,81,12.0
+2024,Sakhir,44,12.0
+2024,Sakhir,10,12.0
+2024,Sakhir,77,12.0
+2024,Sakhir,4,13.0
+2024,Sakhir,3,13.0
+2024,Sakhir,55,14.0
+2024,Sakhir,22,14.0
+2024,Sakhir,14,15.0
+2024,Sakhir,23,15.0
+2024,Sakhir,1,17.0
+2024,Sakhir,27,20.0
+2024,Sakhir,18,27.0
+2024,Sakhir,24,28.0
+2024,Sakhir,2,28.0
+2024,Sakhir,31,30.0
+2024,Sakhir,63,31.0
+2024,Sakhir,77,30.0
+2024,Sakhir,10,31.0
+2024,Sakhir,20,32.0
+2024,Sakhir,4,33.0
+2024,Sakhir,44,33.0
+2024,Sakhir,16,34.0
+2024,Sakhir,81,34.0
+2024,Sakhir,22,34.0
+2024,Sakhir,55,35.0
+2024,Sakhir,3,35.0
+2024,Sakhir,11,36.0
+2024,Sakhir,23,36.0
+2024,Sakhir,1,37.0
+2024,Sakhir,14,41.0
+2024,Sakhir,2,40.0
+2024,Sakhir,27,41.0
+2024,Sakhir,10,43.0
+2024,Jeddah,1,7.0
+2024,Jeddah,11,7.0
+2024,Jeddah,16,7.0
+2024,Jeddah,81,7.0
+2024,Jeddah,14,7.0
+2024,Jeddah,63,7.0
+2024,Jeddah,22,7.0
+2024,Jeddah,38,7.0
+2024,Jeddah,20,7.0
+2024,Jeddah,23,7.0
+2024,Jeddah,31,7.0
+2024,Jeddah,77,7.0
+2024,Jeddah,2,7.0
+2024,Jeddah,3,7.0
+2024,Jeddah,27,33.0
+2024,Jeddah,77,35.0
+2024,Jeddah,44,36.0
+2024,Jeddah,4,37.0
+2024,Jeddah,24,41.0
+2024,Melbourne,3,5.0
+2024,Melbourne,23,6.0
+2024,Melbourne,24,6.0
+2024,Melbourne,44,7.0
+2024,Melbourne,20,7.0
+2024,Melbourne,63,8.0
+2024,Melbourne,18,8.0
+2024,Melbourne,77,8.0
+2024,Melbourne,16,9.0
+2024,Melbourne,81,9.0
+2024,Melbourne,22,9.0
+2024,Melbourne,31,9.0
+2024,Melbourne,4,14.0
+2024,Melbourne,11,14.0
+2024,Melbourne,55,16.0
+2024,Melbourne,31,16.0
+2024,Melbourne,14,17.0
+2024,Melbourne,27,17.0
+2024,Melbourne,10,17.0
+2024,Melbourne,23,27.0
+2024,Melbourne,3,29.0
+2024,Melbourne,20,33.0
+2024,Melbourne,16,34.0
+2024,Melbourne,11,35.0
+2024,Melbourne,27,35.0
+2024,Melbourne,24,35.0
+2024,Melbourne,22,36.0
+2024,Melbourne,77,36.0
+2024,Melbourne,18,37.0
+2024,Melbourne,81,39.0
+2024,Melbourne,4,40.0
+2024,Melbourne,55,41.0
+2024,Melbourne,14,41.0
+2024,Melbourne,10,41.0
+2024,Melbourne,31,42.0
+2024,Melbourne,63,45.0
+2024,Suzuka,1,1.0
+2024,Suzuka,11,1.0
+2024,Suzuka,4,1.0
+2024,Suzuka,55,1.0
+2024,Suzuka,14,1.0
+2024,Suzuka,81,1.0
+2024,Suzuka,44,1.0
+2024,Suzuka,16,1.0
+2024,Suzuka,63,1.0
+2024,Suzuka,27,1.0
+2024,Suzuka,77,1.0
+2024,Suzuka,22,1.0
+2024,Suzuka,31,1.0
+2024,Suzuka,10,1.0
+2024,Suzuka,18,1.0
+2024,Suzuka,20,1.0
+2024,Suzuka,2,1.0
+2024,Suzuka,24,1.0
+2024,Suzuka,27,5.0
+2024,Suzuka,77,6.0
+2024,Suzuka,22,7.0
+2024,Suzuka,24,7.0
+2024,Suzuka,4,11.0
+2024,Suzuka,24,11.0
+2024,Suzuka,81,12.0
+2024,Suzuka,18,12.0
+2024,Suzuka,14,13.0
+2024,Suzuka,11,15.0
+2024,Suzuka,55,15.0
+2024,Suzuka,1,16.0
+2024,Suzuka,10,16.0
+2024,Suzuka,31,19.0
+2024,Suzuka,63,22.0
+2024,Suzuka,22,22.0
+2024,Suzuka,20,22.0
+2024,Suzuka,18,22.0
+2024,Suzuka,77,22.0
+2024,Suzuka,2,22.0
+2024,Suzuka,44,23.0
+2024,Suzuka,16,26.0
+2024,Suzuka,4,26.0
+2024,Suzuka,81,32.0
+2024,Suzuka,10,32.0
+2024,Suzuka,11,33.0
+2024,Suzuka,14,33.0
+2024,Suzuka,27,33.0
+2024,Suzuka,31,33.0
+2024,Suzuka,1,34.0
+2024,Suzuka,18,34.0
+2024,Suzuka,2,34.0
+2024,Suzuka,55,36.0
+2024,Suzuka,63,37.0
+2024,Suzuka,44,39.0
+2024,Suzuka,2,41.0
+2024,Shanghai,27,8.0
+2024,Shanghai,22,8.0
+2024,Shanghai,24,8.0
+2024,Shanghai,18,9.0
+2024,Shanghai,77,9.0
+2024,Shanghai,31,9.0
+2024,Shanghai,23,9.0
+2024,Shanghai,44,9.0
+2024,Shanghai,14,11.0
+2024,Shanghai,63,11.0
+2024,Shanghai,10,11.0
+2024,Shanghai,2,12.0
+2024,Shanghai,1,13.0
+2024,Shanghai,11,13.0
+2024,Shanghai,3,14.0
+2024,Shanghai,81,16.0
+2024,Shanghai,55,17.0
+2024,Shanghai,20,17.0
+2024,Shanghai,16,21.0
+2024,Shanghai,18,21.0
+2024,Shanghai,44,21.0
+2024,Shanghai,4,22.0
+2024,Shanghai,1,23.0
+2024,Shanghai,11,23.0
+2024,Shanghai,14,23.0
+2024,Shanghai,63,23.0
+2024,Shanghai,27,23.0
+2024,Shanghai,31,23.0
+2024,Shanghai,22,23.0
+2024,Shanghai,23,23.0
+2024,Shanghai,24,23.0
+2024,Shanghai,10,23.0
+2024,Shanghai,81,24.0
+2024,Shanghai,2,24.0
+2024,Shanghai,18,26.0
+2024,Shanghai,20,27.0
+2024,Shanghai,18,35.0
+2024,Shanghai,10,38.0
+2024,Shanghai,24,40.0
+2024,Shanghai,14,43.0
+2024,Miami,23,10.0
+2024,Miami,18,11.0
+2024,Miami,2,11.0
+2024,Miami,77,11.0
+2024,Miami,27,12.0
+2024,Miami,10,12.0
+2024,Miami,11,17.0
+2024,Miami,16,19.0
+2024,Miami,31,22.0
+2024,Miami,14,22.0
+2024,Miami,20,22.0
+2024,Miami,1,23.0
+2024,Miami,63,24.0
+2024,Miami,44,26.0
+2024,Miami,81,27.0
+2024,Miami,55,27.0
+2024,Miami,11,28.0
+2024,Miami,22,28.0
+2024,Miami,24,28.0
+2024,Miami,3,28.0
+2024,Miami,27,28.0
+2024,Miami,18,28.0
+2024,Miami,20,28.0
+2024,Miami,4,29.0
+2024,Miami,77,29.0
+2024,Miami,20,31.0
+2024,Miami,81,40.0
+2024,Miami,23,53.0
+2024,Imola,14,7.0
+2024,Imola,23,8.0
+2024,Imola,10,8.0
+2024,Imola,77,8.0
+2024,Imola,23,9.0
+2024,Imola,3,11.0
+2024,Imola,22,12.0
+2024,Imola,27,13.0
+2024,Imola,63,21.0
+2024,Imola,4,22.0
+2024,Imola,81,23.0
+2024,Imola,1,24.0
+2024,Imola,23,23.0
+2024,Imola,16,25.0
+2024,Imola,31,25.0
+2024,Imola,55,27.0
+2024,Imola,44,27.0
+2024,Imola,23,28.0
+2024,Imola,10,30.0
+2024,Imola,2,31.0
+2024,Imola,24,33.0
+2024,Imola,11,37.0
+2024,Imola,18,37.0
+2024,Imola,20,37.0
+2024,Imola,14,40.0
+2024,Imola,63,52.0
+2024,Imola,14,59.0
+2024,Monte Carlo,16,1.0
+2024,Monte Carlo,81,1.0
+2024,Monte Carlo,55,1.0
+2024,Monte Carlo,4,1.0
+2024,Monte Carlo,63,1.0
+2024,Monte Carlo,1,1.0
+2024,Monte Carlo,44,1.0
+2024,Monte Carlo,22,1.0
+2024,Monte Carlo,23,1.0
+2024,Monte Carlo,10,1.0
+2024,Monte Carlo,18,1.0
+2024,Monte Carlo,3,1.0
+2024,Monte Carlo,14,1.0
+2024,Monte Carlo,2,1.0
+2024,Monte Carlo,77,1.0
+2024,Monte Carlo,24,1.0
+2024,Monte Carlo,77,15.0
+2024,Monte Carlo,18,42.0
+2024,Monte Carlo,18,48.0
+2024,Monte Carlo,44,51.0
+2024,Monte Carlo,1,52.0
+2024,Monte Carlo,2,57.0
+2024,Monte Carlo,24,70.0
+2024,Montreal,20,7.0
+2024,Montreal,27,12.0
+2024,Montreal,24,24.0
+2024,Montreal,1,25.0
+2024,Montreal,63,25.0
+2024,Montreal,81,25.0
+2024,Montreal,44,25.0
+2024,Montreal,14,25.0
+2024,Montreal,18,25.0
+2024,Montreal,23,25.0
+2024,Montreal,16,25.0
+2024,Montreal,55,25.0
+2024,Montreal,20,25.0
+2024,Montreal,10,25.0
+2024,Montreal,11,25.0
+2024,Montreal,27,25.0
+2024,Montreal,4,26.0
+2024,Montreal,3,26.0
+2024,Montreal,16,28.0
+2024,Montreal,16,31.0
+2024,Montreal,10,40.0
+2024,Montreal,20,41.0
+2024,Montreal,77,42.0
+2024,Montreal,44,43.0
+2024,Montreal,3,43.0
+2024,Montreal,55,43.0
+2024,Montreal,11,43.0
+2024,Montreal,81,44.0
+2024,Montreal,14,44.0
+2024,Montreal,22,44.0
+2024,Montreal,18,44.0
+2024,Montreal,31,44.0
+2024,Montreal,23,44.0
+2024,Montreal,27,44.0
+2024,Montreal,1,45.0
+2024,Montreal,63,45.0
+2024,Montreal,24,44.0
+2024,Montreal,4,47.0
+2024,Montreal,24,52.0
+2024,Montreal,63,54.0
+2024,Montreal,44,54.0
+2024,Montreal,20,54.0
+2024,Catalunya,24,9.0
+2024,Catalunya,22,9.0
+2024,Catalunya,20,10.0
+2024,Catalunya,77,11.0
+2024,Catalunya,27,12.0
+2024,Catalunya,31,13.0
+2024,Catalunya,11,13.0
+2024,Catalunya,10,14.0
+2024,Catalunya,2,14.0
+2024,Catalunya,63,15.0
+2024,Catalunya,55,15.0
+2024,Catalunya,44,16.0
+2024,Catalunya,3,16.0
+2024,Catalunya,1,17.0
+2024,Catalunya,18,17.0
+2024,Catalunya,23,18.0
+2024,Catalunya,14,19.0
+2024,Catalunya,81,21.0
+2024,Catalunya,4,23.0
+2024,Catalunya,16,24.0
+2024,Catalunya,22,27.0
+2024,Catalunya,77,28.0
+2024,Catalunya,20,29.0
+2024,Catalunya,11,31.0
+2024,Catalunya,2,34.0
+2024,Catalunya,63,36.0
+2024,Catalunya,55,36.0
+2024,Catalunya,31,37.0
+2024,Catalunya,18,37.0
+2024,Catalunya,10,38.0
+2024,Catalunya,27,38.0
+2024,Catalunya,24,41.0
+2024,Catalunya,3,42.0
+2024,Catalunya,44,43.0
+2024,Catalunya,1,44.0
+2024,Catalunya,23,43.0
+2024,Catalunya,22,44.0
+2024,Catalunya,14,45.0
+2024,Catalunya,81,46.0
+2024,Catalunya,4,47.0
+2024,Catalunya,16,47.0
+2024,Catalunya,11,49.0
+2024,Spielberg,16,1.0
+2024,Spielberg,2,1.0
+2024,Spielberg,20,10.0
+2024,Spielberg,3,10.0
+2024,Spielberg,27,11.0
+2024,Spielberg,14,11.0
+2024,Spielberg,23,12.0
+2024,Spielberg,16,16.0
+2024,Spielberg,31,19.0
+2024,Spielberg,77,19.0
+2024,Spielberg,10,20.0
+2024,Spielberg,18,20.0
+2024,Spielberg,2,20.0
+2024,Spielberg,44,21.0
+2024,Spielberg,11,21.0
+2024,Spielberg,22,21.0
+2024,Spielberg,63,22.0
+2024,Spielberg,55,22.0
+2024,Spielberg,1,23.0
+2024,Spielberg,4,23.0
+2024,Spielberg,81,25.0
+2024,Spielberg,24,28.0
+2024,Spielberg,16,33.0
+2024,Spielberg,14,35.0
+2024,Spielberg,3,37.0
+2024,Spielberg,20,38.0
+2024,Spielberg,27,39.0
+2024,Spielberg,23,39.0
+2024,Spielberg,10,42.0
+2024,Spielberg,77,42.0
+2024,Spielberg,31,43.0
+2024,Spielberg,18,43.0
+2024,Spielberg,22,44.0
+2024,Spielberg,63,46.0
+2024,Spielberg,55,47.0
+2024,Spielberg,2,49.0
+2024,Spielberg,1,51.0
+2024,Spielberg,4,51.0
+2024,Spielberg,81,51.0
+2024,Spielberg,11,51.0
+2024,Spielberg,16,51.0
+2024,Spielberg,24,51.0
+2024,Spielberg,44,53.0
+2024,Spielberg,1,64.0
+2024,Spielberg,14,68.0
+2024,Silverstone,24,12.0
+2024,Silverstone,16,19.0
+2024,Silverstone,11,19.0
+2024,Silverstone,31,19.0
+2024,Silverstone,24,19.0
+2024,Silverstone,31,21.0
+2024,Silverstone,1,26.0
+2024,Silverstone,55,26.0
+2024,Silverstone,27,26.0
+2024,Silverstone,18,26.0
+2024,Silverstone,3,26.0
+2024,Silverstone,77,26.0
+2024,Silverstone,4,27.0
+2024,Silverstone,44,27.0
+2024,Silverstone,63,27.0
+2024,Silverstone,14,27.0
+2024,Silverstone,22,27.0
+2024,Silverstone,31,26.0
+2024,Silverstone,23,27.0
+2024,Silverstone,20,27.0
+2024,Silverstone,2,27.0
+2024,Silverstone,24,26.0
+2024,Silverstone,81,28.0
+2024,Silverstone,16,27.0
+2024,Silverstone,11,28.0
+2024,Silverstone,20,37.0
+2024,Silverstone,3,37.0
+2024,Silverstone,77,37.0
+2024,Silverstone,44,38.0
+2024,Silverstone,1,38.0
+2024,Silverstone,81,38.0
+2024,Silverstone,16,37.0
+2024,Silverstone,11,37.0
+2024,Silverstone,14,38.0
+2024,Silverstone,22,38.0
+2024,Silverstone,23,38.0
+2024,Silverstone,2,38.0
+2024,Silverstone,4,39.0
+2024,Silverstone,24,37.0
+2024,Silverstone,55,39.0
+2024,Silverstone,27,39.0
+2024,Silverstone,18,39.0
+2024,Silverstone,31,38.0
+2024,Silverstone,11,47.0
+2024,Silverstone,55,50.0
+2024,Hungaroring,27,2.0
+2024,Hungaroring,23,6.0
+2024,Hungaroring,20,6.0
+2024,Hungaroring,31,6.0
+2024,Hungaroring,14,7.0
+2024,Hungaroring,3,7.0
+2024,Hungaroring,24,7.0
+2024,Hungaroring,2,8.0
+2024,Hungaroring,18,14.0
+2024,Hungaroring,44,16.0
+2024,Hungaroring,77,16.0
+2024,Hungaroring,4,17.0
+2024,Hungaroring,81,18.0
+2024,Hungaroring,1,21.0
+2024,Hungaroring,55,21.0
+2024,Hungaroring,16,23.0
+2024,Hungaroring,11,28.0
+2024,Hungaroring,10,28.0
+2024,Hungaroring,3,28.0
+2024,Hungaroring,22,29.0
+2024,Hungaroring,27,29.0
+2024,Hungaroring,23,29.0
+2024,Hungaroring,31,30.0
+2024,Hungaroring,63,33.0
+2024,Hungaroring,2,33.0
+2024,Hungaroring,20,34.0
+2024,Hungaroring,24,36.0
+2024,Hungaroring,14,37.0
+2024,Hungaroring,44,40.0
+2024,Hungaroring,16,40.0
+2024,Hungaroring,4,45.0
+2024,Hungaroring,18,45.0
+2024,Hungaroring,77,45.0
+2024,Hungaroring,81,47.0
+2024,Hungaroring,55,47.0
+2024,Hungaroring,11,47.0
+2024,Hungaroring,1,49.0
+2024,Hungaroring,63,53.0
+2024,Hungaroring,2,63.0
+2024,Hungaroring,31,64.0
+2024,Spa-Francorchamps,27,7.0
+2024,Spa-Francorchamps,23,8.0
+2024,Spa-Francorchamps,3,8.0
+2024,Spa-Francorchamps,2,8.0
+2024,Spa-Francorchamps,10,9.0
+2024,Spa-Francorchamps,63,10.0
+2024,Spa-Francorchamps,1,10.0
+2024,Spa-Francorchamps,44,11.0
+2024,Spa-Francorchamps,11,11.0
+2024,Spa-Francorchamps,81,11.0
+2024,Spa-Francorchamps,77,11.0
+2024,Spa-Francorchamps,16,12.0
+2024,Spa-Francorchamps,31,12.0
+2024,Spa-Francorchamps,18,12.0
+2024,Spa-Francorchamps,14,13.0
+2024,Spa-Francorchamps,4,15.0
+2024,Spa-Francorchamps,22,15.0
+2024,Spa-Francorchamps,20,17.0
+2024,Spa-Francorchamps,55,20.0
+2024,Spa-Francorchamps,27,20.0
+2024,Spa-Francorchamps,11,21.0
+2024,Spa-Francorchamps,3,21.0
+2024,Spa-Francorchamps,23,23.0
+2024,Spa-Francorchamps,2,24.0
+2024,Spa-Francorchamps,16,25.0
+2024,Spa-Francorchamps,44,26.0
+2024,Spa-Francorchamps,1,28.0
+2024,Spa-Francorchamps,55,28.0
+2024,Spa-Francorchamps,10,28.0
+2024,Spa-Francorchamps,4,29.0
+2024,Spa-Francorchamps,81,30.0
+2024,Spa-Francorchamps,31,30.0
+2024,Spa-Francorchamps,77,35.0
+2024,Spa-Francorchamps,11,42.0
+2024,Zandvoort,23,12.0
+2024,Zandvoort,27,14.0
+2024,Zandvoort,22,14.0
+2024,Zandvoort,77,15.0
+2024,Zandvoort,24,18.0
+2024,Zandvoort,2,22.0
+2024,Zandvoort,44,23.0
+2024,Zandvoort,16,24.0
+2024,Zandvoort,63,25.0
+2024,Zandvoort,1,27.0
+2024,Zandvoort,4,28.0
+2024,Zandvoort,11,29.0
+2024,Zandvoort,3,29.0
+2024,Zandvoort,55,30.0
+2024,Zandvoort,18,30.0
+2024,Zandvoort,31,30.0
+2024,Zandvoort,14,31.0
+2024,Zandvoort,10,32.0
+2024,Zandvoort,22,32.0
+2024,Zandvoort,81,33.0
+2024,Zandvoort,20,40.0
+2024,Zandvoort,77,43.0
+2024,Zandvoort,44,48.0
+2024,Zandvoort,24,51.0
+2024,Zandvoort,63,54.0
+2024,Zandvoort,23,54.0
+2024,Monza,27,5.0
+2024,Monza,10,10.0
+2024,Monza,63,11.0
+2024,Monza,3,11.0
+2024,Monza,14,12.0
+2024,Monza,4,14.0
+2024,Monza,20,14.0
+2024,Monza,16,15.0
+2024,Monza,44,15.0
+2024,Monza,24,15.0
+2024,Monza,81,16.0
+2024,Monza,43,16.0
+2024,Monza,23,17.0
+2024,Monza,55,19.0
+2024,Monza,18,19.0
+2024,Monza,1,22.0
+2024,Monza,11,23.0
+2024,Monza,10,30.0
+2024,Monza,31,31.0
+2024,Monza,4,32.0
+2024,Monza,27,32.0
+2024,Monza,63,33.0
+2024,Monza,77,33.0
+2024,Monza,11,35.0
+2024,Monza,14,35.0
+2024,Monza,18,36.0
+2024,Monza,44,37.0
+2024,Monza,81,38.0
+2024,Monza,1,41.0
+2024,Monza,18,50.0
+2024,Baku,18,1.0
+2024,Baku,43,10.0
+2024,Baku,14,11.0
+2024,Baku,77,11.0
+2024,Baku,1,12.0
+2024,Baku,63,12.0
+2024,Baku,44,12.0
+2024,Baku,22,12.0
+2024,Baku,11,13.0
+2024,Baku,50,14.0
+2024,Baku,81,15.0
+2024,Baku,27,15.0
+2024,Baku,16,16.0
+2024,Baku,55,17.0
+2024,Baku,18,22.0
+2024,Baku,23,31.0
+2024,Baku,24,34.0
+2024,Baku,4,37.0
+2024,Baku,1,49.0
+2024,Baku,3,49.0
+2024,Baku,31,49.0
+2024,Baku,10,50.0
+2024,Singapore,3,10.0
+2024,Singapore,23,11.0
+2024,Singapore,55,13.0
+2024,Singapore,44,17.0
+2024,Singapore,14,25.0
+2024,Singapore,18,26.0
+2024,Singapore,63,27.0
+2024,Singapore,11,28.0
+2024,Singapore,20,28.0
+2024,Singapore,1,29.0
+2024,Singapore,27,29.0
+2024,Singapore,43,29.0
+2024,Singapore,31,29.0
+2024,Singapore,4,30.0
+2024,Singapore,22,33.0
+2024,Singapore,77,33.0
+2024,Singapore,24,34.0
+2024,Singapore,16,36.0
+2024,Singapore,10,37.0
+2024,Singapore,81,38.0
+2024,Singapore,3,46.0
+2024,Singapore,20,49.0
+2024,Singapore,3,58.0
+2024,Austin,23,3.0
+2024,Austin,24,13.0
+2024,Austin,77,15.0
+2024,Austin,20,17.0
+2024,Austin,10,18.0
+2024,Austin,22,18.0
+2024,Austin,55,21.0
+2024,Austin,1,25.0
+2024,Austin,16,26.0
+2024,Austin,11,26.0
+2024,Austin,14,26.0
+2024,Austin,27,27.0
+2024,Austin,18,27.0
+2024,Austin,4,31.0
+2024,Austin,31,31.0
+2024,Austin,81,32.0
+2024,Austin,23,33.0
+2024,Austin,24,35.0
+2024,Austin,30,36.0
+2024,Austin,20,38.0
+2024,Austin,43,39.0
+2024,Austin,63,40.0
+2024,Austin,31,51.0
+2024,Mexico City,11,20.0
+2024,Mexico City,1,26.0
+2024,Mexico City,18,26.0
+2024,Mexico City,44,28.0
+2024,Mexico City,10,28.0
+2024,Mexico City,27,29.0
+2024,Mexico City,4,30.0
+2024,Mexico City,20,30.0
+2024,Mexico City,16,31.0
+2024,Mexico City,63,31.0
+2024,Mexico City,55,32.0
+2024,Mexico City,81,39.0
+2024,Mexico City,30,39.0
+2024,Mexico City,24,43.0
+2024,Mexico City,11,43.0
+2024,Mexico City,43,47.0
+2024,Mexico City,31,48.0
+2024,Mexico City,77,49.0
+2024,Mexico City,30,65.0
+2024,Mexico City,16,69.0
+2024,Mexico City,11,68.0
+2024,Interlagos,16,24.0
+2024,Interlagos,27,25.0
+2024,Interlagos,43,26.0
+2024,Interlagos,81,27.0
+2024,Interlagos,14,27.0
+2024,Interlagos,44,27.0
+2024,Interlagos,55,27.0
+2024,Interlagos,50,27.0
+2024,Interlagos,11,27.0
+2024,Interlagos,24,27.0
+2024,Interlagos,63,28.0
+2024,Interlagos,4,28.0
+2024,Interlagos,22,28.0
+2024,Interlagos,30,28.0
+2024,Interlagos,24,28.0
+2024,Interlagos,27,27.0
+2024,Interlagos,43,30.0
+2024,Interlagos,27,29.0
+2024,Interlagos,24,31.0
+2024,Interlagos,31,32.0
+2024,Interlagos,1,32.0
+2024,Interlagos,10,32.0
+2024,Interlagos,4,32.0
+2024,Interlagos,63,32.0
+2024,Interlagos,22,32.0
+2024,Interlagos,16,32.0
+2024,Interlagos,81,32.0
+2024,Interlagos,14,32.0
+2024,Interlagos,30,32.0
+2024,Interlagos,44,32.0
+2024,Interlagos,77,32.0
+2024,Interlagos,55,32.0
+2024,Interlagos,11,32.0
+2024,Interlagos,50,32.0
+2024,Interlagos,24,32.0
+2024,Las Vegas,14,4.0
+2024,Las Vegas,16,9.0
+2024,Las Vegas,4,9.0
+2024,Las Vegas,23,9.0
+2024,Las Vegas,18,9.0
+2024,Las Vegas,55,10.0
+2024,Las Vegas,22,10.0
+2024,Las Vegas,10,10.0
+2024,Las Vegas,81,10.0
+2024,Las Vegas,1,11.0
+2024,Las Vegas,31,11.0
+2024,Las Vegas,24,11.0
+2024,Las Vegas,30,11.0
+2024,Las Vegas,63,12.0
+2024,Las Vegas,31,12.0
+2024,Las Vegas,44,13.0
+2024,Las Vegas,27,14.0
+2024,Las Vegas,43,16.0
+2024,Las Vegas,11,17.0
+2024,Las Vegas,20,17.0
+2024,Las Vegas,77,17.0
+2024,Las Vegas,14,24.0
+2024,Las Vegas,81,25.0
+2024,Las Vegas,43,26.0
+2024,Las Vegas,1,27.0
+2024,Las Vegas,44,27.0
+2024,Las Vegas,55,28.0
+2024,Las Vegas,18,28.0
+2024,Las Vegas,22,29.0
+2024,Las Vegas,4,30.0
+2024,Las Vegas,16,31.0
+2024,Las Vegas,63,32.0
+2024,Las Vegas,11,32.0
+2024,Las Vegas,27,33.0
+2024,Las Vegas,24,34.0
+2024,Las Vegas,77,35.0
+2024,Las Vegas,30,38.0
+2024,Las Vegas,31,45.0
+2024,Las Vegas,4,48.0
+2024,Lusail,18,1.0
+2024,Lusail,27,1.0
+2024,Lusail,18,7.0
+2024,Lusail,63,23.0
+2024,Lusail,77,24.0
+2024,Lusail,20,27.0
+2024,Lusail,27,31.0
+2024,Lusail,81,34.0
+2024,Lusail,55,34.0
+2024,Lusail,1,35.0
+2024,Lusail,44,34.0
+2024,Lusail,4,35.0
+2024,Lusail,16,35.0
+2024,Lusail,11,35.0
+2024,Lusail,10,35.0
+2024,Lusail,63,35.0
+2024,Lusail,14,35.0
+2024,Lusail,24,35.0
+2024,Lusail,22,35.0
+2024,Lusail,23,35.0
+2024,Lusail,30,35.0
+2024,Lusail,1,36.0
+2024,Lusail,44,35.0
+2024,Lusail,4,36.0
+2024,Lusail,77,35.0
+2024,Lusail,16,36.0
+2024,Lusail,81,36.0
+2024,Lusail,11,36.0
+2024,Lusail,10,36.0
+2024,Lusail,63,36.0
+2024,Lusail,55,36.0
+2024,Lusail,24,36.0
+2024,Lusail,14,36.0
+2024,Lusail,20,36.0
+2024,Lusail,22,36.0
+2024,Lusail,23,36.0
+2024,Lusail,27,36.0
+2024,Lusail,30,36.0
+2024,Lusail,1,37.0
+2024,Lusail,44,36.0
+2024,Lusail,4,37.0
+2024,Lusail,77,36.0
+2024,Lusail,16,37.0
+2024,Lusail,81,37.0
+2024,Lusail,11,37.0
+2024,Lusail,10,37.0
+2024,Lusail,63,37.0
+2024,Lusail,55,37.0
+2024,Lusail,24,37.0
+2024,Lusail,14,37.0
+2024,Lusail,20,37.0
+2024,Lusail,22,37.0
+2024,Lusail,23,37.0
+2024,Lusail,27,37.0
+2024,Lusail,30,37.0
+2024,Lusail,22,40.0
+2024,Lusail,30,40.0
+2024,Lusail,4,45.0
+2024,Lusail,44,47.0
+2024,Lusail,23,55.0
+2024,Lusail,31,
+2024,Lusail,43,
+2024,Yas Marina Circuit,43,3.0
+2024,Yas Marina Circuit,81,4.0
+2024,Yas Marina Circuit,77,6.0
+2024,Yas Marina Circuit,18,11.0
+2024,Yas Marina Circuit,20,12.0
+2024,Yas Marina Circuit,24,12.0
+2024,Yas Marina Circuit,23,12.0
+2024,Yas Marina Circuit,27,13.0
+2024,Yas Marina Circuit,14,13.0
+2024,Yas Marina Circuit,10,14.0
+2024,Yas Marina Circuit,16,20.0
+2024,Yas Marina Circuit,22,22.0
+2024,Yas Marina Circuit,61,22.0
+2024,Yas Marina Circuit,30,23.0
+2024,Yas Marina Circuit,30,24.0
+2024,Yas Marina Circuit,55,25.0
+2024,Yas Marina Circuit,4,26.0
+2024,Yas Marina Circuit,63,26.0
+2024,Yas Marina Circuit,1,29.0
+2024,Yas Marina Circuit,20,29.0
+2024,Yas Marina Circuit,30,29.0
+2024,Yas Marina Circuit,20,30.0
+2024,Yas Marina Circuit,18,32.0
+2024,Yas Marina Circuit,81,32.0
+2024,Yas Marina Circuit,44,34.0
+2024,Yas Marina Circuit,14,37.0
+2024,Yas Marina Circuit,24,39.0
+2024,Yas Marina Circuit,20,55.0
+2025,Melbourne,4,2.0
+2025,Melbourne,1,2.0
+2025,Melbourne,81,2.0
+2025,Melbourne,63,2.0
+2025,Melbourne,16,2.0
+2025,Melbourne,22,2.0
+2025,Melbourne,23,2.0
+2025,Melbourne,44,2.0
+2025,Melbourne,10,2.0
+2025,Melbourne,14,2.0
+2025,Melbourne,18,2.0
+2025,Melbourne,27,2.0
+2025,Melbourne,12,2.0
+2025,Melbourne,5,2.0
+2025,Melbourne,31,2.0
+2025,Melbourne,30,2.0
+2025,Melbourne,87,2.0
+2025,Melbourne,4,3.0
+2025,Melbourne,1,3.0
+2025,Melbourne,81,3.0
+2025,Melbourne,63,3.0
+2025,Melbourne,16,3.0
+2025,Melbourne,22,3.0
+2025,Melbourne,23,3.0
+2025,Melbourne,44,3.0
+2025,Melbourne,10,3.0
+2025,Melbourne,14,3.0
+2025,Melbourne,18,3.0
+2025,Melbourne,27,3.0
+2025,Melbourne,12,3.0
+2025,Melbourne,5,3.0
+2025,Melbourne,31,3.0
+2025,Melbourne,30,3.0
+2025,Melbourne,87,3.0
+2025,Melbourne,4,4.0
+2025,Melbourne,1,4.0
+2025,Melbourne,81,4.0
+2025,Melbourne,63,4.0
+2025,Melbourne,16,4.0
+2025,Melbourne,22,4.0
+2025,Melbourne,23,4.0
+2025,Melbourne,44,4.0
+2025,Melbourne,10,4.0
+2025,Melbourne,14,4.0
+2025,Melbourne,18,4.0
+2025,Melbourne,27,4.0
+2025,Melbourne,12,4.0
+2025,Melbourne,5,4.0
+2025,Melbourne,31,4.0
+2025,Melbourne,30,4.0
+2025,Melbourne,87,4.0
+2025,Melbourne,22,33.0
+2025,Melbourne,23,33.0
+2025,Melbourne,44,33.0
+2025,Melbourne,10,33.0
+2025,Melbourne,12,33.0
+2025,Melbourne,18,33.0
+2025,Melbourne,27,33.0
+2025,Melbourne,4,34.0
+2025,Melbourne,5,33.0
+2025,Melbourne,81,34.0
+2025,Melbourne,30,33.0
+2025,Melbourne,1,34.0
+2025,Melbourne,63,34.0
+2025,Melbourne,16,34.0
+2025,Melbourne,31,39.0
+2025,Melbourne,87,39.0
+2025,Melbourne,4,44.0
+2025,Melbourne,63,44.0
+2025,Melbourne,23,44.0
+2025,Melbourne,18,44.0
+2025,Melbourne,12,44.0
+2025,Melbourne,27,44.0
+2025,Melbourne,5,44.0
+2025,Melbourne,81,44.0
+2025,Melbourne,87,44.0
+2025,Melbourne,1,46.0
+2025,Melbourne,10,46.0
+2025,Melbourne,31,46.0
+2025,Melbourne,44,47.0
+2025,Melbourne,16,47.0
+2025,Melbourne,22,47.0
+2025,Shanghai,5,1.0
+2025,Shanghai,10,10.0
+2025,Shanghai,22,11.0
+2025,Shanghai,31,11.0
+2025,Shanghai,7,11.0
+2025,Shanghai,12,12.0
+2025,Shanghai,6,12.0
+2025,Shanghai,44,13.0
+2025,Shanghai,1,13.0
+2025,Shanghai,81,14.0
+2025,Shanghai,63,14.0
+2025,Shanghai,4,15.0
+2025,Shanghai,16,15.0
+2025,Shanghai,55,17.0
+2025,Shanghai,30,18.0
+2025,Shanghai,23,20.0
+2025,Shanghai,27,20.0
+2025,Shanghai,87,26.0
+2025,Shanghai,5,26.0
+2025,Shanghai,30,30.0
+2025,Shanghai,6,33.0
+2025,Shanghai,22,35.0
+2025,Shanghai,18,36.0
+2025,Shanghai,44,37.0
+2025,Shanghai,22,46.0
+2025,Suzuka,18,9.0
+2025,Suzuka,7,15.0
+2025,Suzuka,63,19.0
+2025,Suzuka,81,20.0
+2025,Suzuka,1,21.0
+2025,Suzuka,4,21.0
+2025,Suzuka,16,21.0
+2025,Suzuka,27,22.0
+2025,Suzuka,87,23.0
+2025,Suzuka,22,23.0
+2025,Suzuka,23,24.0
+2025,Suzuka,14,24.0
+2025,Suzuka,10,24.0
+2025,Suzuka,6,25.0
+2025,Suzuka,44,30.0
+2025,Suzuka,18,30.0
+2025,Suzuka,12,31.0
+2025,Suzuka,5,31.0
+2025,Suzuka,31,32.0
+2025,Suzuka,30,33.0
+2025,Suzuka,55,33.0
+2025,Sakhir,27,5.0
+2025,Sakhir,6,6.0
+2025,Sakhir,31,8.0
+2025,Sakhir,7,9.0
+2025,Sakhir,4,10.0
+2025,Sakhir,10,10.0
+2025,Sakhir,1,10.0
+2025,Sakhir,22,11.0
+2025,Sakhir,12,12.0
+2025,Sakhir,18,12.0
+2025,Sakhir,63,13.0
+2025,Sakhir,5,13.0
+2025,Sakhir,81,14.0
+2025,Sakhir,55,14.0
+2025,Sakhir,87,14.0
+2025,Sakhir,30,14.0
+2025,Sakhir,23,16.0
+2025,Sakhir,14,16.0
+2025,Sakhir,16,17.0
+2025,Sakhir,44,17.0
+2025,Sakhir,1,26.0
+2025,Sakhir,31,27.0
+2025,Sakhir,12,27.0
+2025,Sakhir,27,27.0
+2025,Sakhir,10,28.0
+2025,Sakhir,7,28.0
+2025,Sakhir,6,28.0
+2025,Sakhir,81,32.0
+2025,Sakhir,63,32.0
+2025,Sakhir,16,32.0
+2025,Sakhir,4,32.0
+2025,Sakhir,44,32.0
+2025,Sakhir,55,32.0
+2025,Sakhir,22,32.0
+2025,Sakhir,87,32.0
+2025,Sakhir,23,32.0
+2025,Sakhir,12,32.0
+2025,Sakhir,14,32.0
+2025,Sakhir,30,32.0
+2025,Sakhir,18,32.0
+2025,Sakhir,5,32.0
+2025,Sakhir,55,44.0
+2025,Jeddah,7,1.0
+2025,Jeddah,31,1.0
+2025,Jeddah,5,1.0
+2025,Jeddah,87,18.0
+2025,Jeddah,81,19.0
+2025,Jeddah,12,19.0
+2025,Jeddah,14,19.0
+2025,Jeddah,63,20.0
+2025,Jeddah,30,20.0
+2025,Jeddah,1,21.0
+2025,Jeddah,55,21.0
+2025,Jeddah,23,22.0
+2025,Jeddah,44,23.0
+2025,Jeddah,16,29.0
+2025,Jeddah,7,32.0
+2025,Jeddah,27,33.0
+2025,Jeddah,4,34.0
+2025,Jeddah,6,34.0
+2025,Jeddah,18,39.0
+2025,Miami,5,19.0
+2025,Miami,18,20.0
+2025,Miami,6,22.0
+2025,Miami,31,23.0
+2025,Miami,12,25.0
+2025,Miami,55,25.0
+2025,Miami,1,26.0
+2025,Miami,23,26.0
+2025,Miami,22,27.0
+2025,Miami,44,28.0
+2025,Miami,14,28.0
+2025,Miami,30,28.0
+2025,Miami,81,29.0
+2025,Miami,4,29.0
+2025,Miami,63,29.0
+2025,Miami,16,29.0
+2025,Miami,10,32.0
+2025,Miami,27,36.0
+2025,Imola,31,1.0
+2025,Imola,10,9.0
+2025,Imola,16,10.0
+2025,Imola,30,10.0
+2025,Imola,63,11.0
+2025,Imola,55,11.0
+2025,Imola,14,12.0
+2025,Imola,5,12.0
+2025,Imola,81,13.0
+2025,Imola,18,14.0
+2025,Imola,43,22.0
+2025,Imola,4,28.0
+2025,Imola,1,29.0
+2025,Imola,23,29.0
+2025,Imola,6,29.0
+2025,Imola,12,29.0
+2025,Imola,44,29.0
+2025,Imola,16,29.0
+2025,Imola,27,29.0
+2025,Imola,63,29.0
+2025,Imola,87,29.0
+2025,Imola,22,29.0
+2025,Imola,55,29.0
+2025,Imola,10,29.0
+2025,Imola,30,29.0
+2025,Imola,5,29.0
+2025,Imola,81,30.0
+2025,Imola,87,31.0
+2025,Imola,1,46.0
+2025,Imola,4,46.0
+2025,Imola,44,46.0
+2025,Imola,6,46.0
+2025,Imola,14,46.0
+2025,Imola,18,46.0
+2025,Imola,43,46.0
+2025,Imola,5,46.0
+2025,Imola,23,47.0
+2025,Monte Carlo,22,1.0
+2025,Monte Carlo,10,1.0
+2025,Monte Carlo,87,1.0
+2025,Monte Carlo,5,1.0
+2025,Monte Carlo,27,12.0
+2025,Monte Carlo,43,13.0
+2025,Monte Carlo,6,14.0
+2025,Monte Carlo,14,16.0
+2025,Monte Carlo,31,16.0
+2025,Monte Carlo,18,17.0
+2025,Monte Carlo,87,17.0
+2025,Monte Carlo,44,18.0
+2025,Monte Carlo,4,19.0
+2025,Monte Carlo,6,19.0
+2025,Monte Carlo,81,20.0
+2025,Monte Carlo,16,22.0
+2025,Monte Carlo,5,26.0
+2025,Monte Carlo,43,26.0
+2025,Monte Carlo,1,28.0
+2025,Monte Carlo,31,28.0
+2025,Monte Carlo,30,31.0
+2025,Monte Carlo,23,32.0
+2025,Monte Carlo,5,35.0
+2025,Monte Carlo,30,40.0
+2025,Monte Carlo,23,40.0
+2025,Monte Carlo,27,44.0
+2025,Monte Carlo,81,48.0
+2025,Monte Carlo,16,49.0
+2025,Monte Carlo,55,48.0
+2025,Monte Carlo,4,50.0
+2025,Monte Carlo,55,53.0
+2025,Monte Carlo,63,53.0
+2025,Monte Carlo,44,56.0
+2025,Monte Carlo,63,62.0
+2025,Monte Carlo,18,64.0
+2025,Monte Carlo,63,68.0
+2025,Monte Carlo,12,69.0
+2025,Monte Carlo,12,71.0
+2025,Monte Carlo,22,73.0
+2025,Monte Carlo,1,77.0
+2025,Catalunya,23,6.0
+2025,Catalunya,87,8.0
+2025,Catalunya,22,8.0
+2025,Catalunya,27,9.0
+2025,Catalunya,55,9.0
+2025,Catalunya,10,10.0
+2025,Catalunya,1,13.0
+2025,Catalunya,43,14.0
+2025,Catalunya,14,15.0
+2025,Catalunya,44,16.0
+2025,Catalunya,16,17.0
+2025,Catalunya,30,18.0
+2025,Catalunya,6,19.0
+2025,Catalunya,5,19.0
+2025,Catalunya,63,20.0
+2025,Catalunya,31,20.0
+2025,Catalunya,4,21.0
+2025,Catalunya,12,21.0
+2025,Catalunya,81,22.0
+2025,Catalunya,22,24.0
+2025,Catalunya,23,26.0
+2025,Catalunya,1,29.0
+2025,Catalunya,10,31.0
+2025,Catalunya,55,34.0
+2025,Catalunya,87,35.0
+2025,Catalunya,16,40.0
+2025,Catalunya,43,39.0
+2025,Catalunya,63,41.0
+2025,Catalunya,14,42.0
+2025,Catalunya,31,43.0
+2025,Catalunya,30,44.0
+2025,Catalunya,22,44.0
+2025,Catalunya,27,45.0
+2025,Catalunya,44,46.0
+2025,Catalunya,1,47.0
+2025,Catalunya,4,48.0
+2025,Catalunya,6,48.0
+2025,Catalunya,81,49.0
+2025,Catalunya,12,49.0
+2025,Catalunya,5,49.0
+2025,Catalunya,81,55.0
+2025,Catalunya,4,55.0
+2025,Catalunya,1,55.0
+2025,Catalunya,14,54.0
+2025,Catalunya,87,54.0
+2025,Catalunya,22,54.0
+2025,Catalunya,16,55.0
+2025,Catalunya,63,55.0
+2025,Catalunya,44,55.0
+2025,Catalunya,43,54.0
+2025,Catalunya,6,55.0
+2025,Catalunya,10,55.0
+2025,Catalunya,55,55.0
+2025,Catalunya,27,56.0
+2025,Montreal,1,12.0
+2025,Montreal,63,13.0
+2025,Montreal,6,13.0
+2025,Montreal,12,14.0
+2025,Montreal,43,14.0
+2025,Montreal,44,15.0
+2025,Montreal,14,15.0
+2025,Montreal,81,16.0
+2025,Montreal,87,18.0
+2025,Montreal,27,19.0
+2025,Montreal,23,23.0
+2025,Montreal,18,24.0
+2025,Montreal,16,28.0
+2025,Montreal,4,29.0
+2025,Montreal,1,37.0
+2025,Montreal,12,38.0
+2025,Montreal,30,38.0
+2025,Montreal,63,42.0
+2025,Montreal,81,45.0
+2025,Montreal,44,45.0
+2025,Montreal,4,47.0
+2025,Montreal,5,49.0
+2025,Montreal,14,50.0
+2025,Montreal,18,51.0
+2025,Montreal,16,53.0
+2025,Montreal,10,53.0
+2025,Montreal,22,56.0
+2025,Montreal,31,57.0
+2025,Montreal,55,57.0
+2025,Montreal,14,66.0
+2025,Montreal,27,66.0
+2025,Montreal,63,67.0
+2025,Montreal,1,67.0
+2025,Montreal,12,67.0
+2025,Montreal,31,66.0
+2025,Montreal,55,66.0
+2025,Montreal,81,67.0
+2025,Montreal,16,67.0
+2025,Montreal,87,66.0
+2025,Montreal,22,66.0
+2025,Montreal,43,66.0
+2025,Montreal,5,66.0
+2025,Montreal,10,66.0
+2025,Montreal,6,66.0
+2025,Montreal,18,66.0
+2025,Montreal,44,67.0
+2025,Montreal,14,67.0
+2025,Montreal,27,67.0
+2025,Montreal,63,68.0
+2025,Montreal,1,68.0
+2025,Montreal,12,68.0
+2025,Montreal,31,67.0
+2025,Montreal,55,67.0
+2025,Montreal,81,68.0
+2025,Montreal,16,68.0
+2025,Montreal,87,67.0
+2025,Montreal,22,67.0
+2025,Montreal,43,67.0
+2025,Montreal,5,67.0
+2025,Montreal,10,67.0
+2025,Montreal,6,67.0
+2025,Montreal,18,67.0
+2025,Montreal,44,68.0
+2025,Montreal,14,68.0
+2025,Montreal,27,68.0
+2025,Montreal,63,69.0
+2025,Montreal,1,69.0
+2025,Montreal,12,69.0
+2025,Montreal,31,68.0
+2025,Montreal,55,68.0
+2025,Montreal,81,69.0
+2025,Montreal,16,69.0
+2025,Montreal,87,68.0
+2025,Montreal,22,68.0
+2025,Montreal,43,68.0
+2025,Montreal,5,68.0
+2025,Montreal,10,68.0
+2025,Montreal,6,68.0
+2025,Montreal,18,68.0
+2025,Montreal,44,69.0
+2025,Montreal,14,69.0
+2025,Montreal,27,69.0
+2025,Spielberg,6,2.0
+2025,Spielberg,87,11.0
+2025,Spielberg,10,12.0
+2025,Spielberg,27,12.0
+2025,Spielberg,23,13.0
+2025,Spielberg,43,13.0
+2025,Spielberg,63,18.0
+2025,Spielberg,22,18.0
+2025,Spielberg,31,19.0
+2025,Spielberg,4,20.0
+2025,Spielberg,5,21.0
+2025,Spielberg,81,24.0
+2025,Spielberg,16,25.0
+2025,Spielberg,44,26.0
+2025,Spielberg,18,26.0
+2025,Spielberg,6,28.0
+2025,Spielberg,22,30.0
+2025,Spielberg,30,32.0
+2025,Spielberg,14,33.0
+2025,Spielberg,10,38.0
+2025,Spielberg,87,39.0
+2025,Spielberg,43,39.0
+2025,Spielberg,27,42.0
+2025,Spielberg,63,45.0
+2025,Spielberg,16,49.0
+2025,Spielberg,5,49.0
+2025,Spielberg,44,50.0
+2025,Spielberg,31,50.0
+2025,Spielberg,4,52.0
+2025,Spielberg,81,53.0
+2025,Spielberg,18,53.0
+2025,Spielberg,22,60.0
+2025,Silverstone,12,2.0
+2025,Silverstone,18,6.0
+2025,Silverstone,27,9.0
+2025,Silverstone,12,9.0
+2025,Silverstone,18,10.0
+2025,Silverstone,63,10.0
+2025,Silverstone,16,10.0
+2025,Silverstone,6,10.0
+2025,Silverstone,87,10.0
+2025,Silverstone,81,11.0
+2025,Silverstone,1,11.0
+2025,Silverstone,4,11.0
+2025,Silverstone,44,11.0
+2025,Silverstone,10,11.0
+2025,Silverstone,14,11.0
+2025,Silverstone,55,11.0
+2025,Silverstone,22,11.0
+2025,Silverstone,23,12.0
+2025,Silverstone,31,18.0
+2025,Silverstone,12,20.0
+2025,Silverstone,14,37.0
+2025,Silverstone,63,38.0
+2025,Silverstone,44,41.0
+2025,Silverstone,18,41.0
+2025,Silverstone,1,41.0
+2025,Silverstone,10,41.0
+2025,Silverstone,55,41.0
+2025,Silverstone,87,41.0
+2025,Silverstone,22,41.0
+2025,Silverstone,27,42.0
+2025,Silverstone,16,42.0
+2025,Silverstone,23,42.0
+2025,Silverstone,31,42.0
+2025,Silverstone,81,43.0
+2025,Silverstone,4,44.0
+2025,Spa-Francorchamps,44,11.0
+2025,Spa-Francorchamps,27,11.0
+2025,Spa-Francorchamps,10,11.0
+2025,Spa-Francorchamps,14,11.0
+2025,Spa-Francorchamps,81,12.0
+2025,Spa-Francorchamps,16,12.0
+2025,Spa-Francorchamps,1,12.0
+2025,Spa-Francorchamps,63,12.0
+2025,Spa-Francorchamps,23,12.0
+2025,Spa-Francorchamps,30,12.0
+2025,Spa-Francorchamps,5,12.0
+2025,Spa-Francorchamps,87,12.0
+2025,Spa-Francorchamps,43,12.0
+2025,Spa-Francorchamps,12,12.0
+2025,Spa-Francorchamps,18,12.0
+2025,Spa-Francorchamps,55,12.0
+2025,Spa-Francorchamps,4,13.0
+2025,Spa-Francorchamps,22,13.0
+2025,Spa-Francorchamps,6,13.0
+2025,Spa-Francorchamps,31,13.0
+2025,Spa-Francorchamps,6,20.0
+2025,Spa-Francorchamps,55,26.0
+2025,Spa-Francorchamps,43,28.0
+2025,Spa-Francorchamps,14,29.0
+2025,Spa-Francorchamps,12,30.0
+2025,Spa-Francorchamps,27,32.0
+2025,Hungaroring,27,5.0
+2025,Hungaroring,43,13.0
+2025,Hungaroring,23,14.0
+2025,Hungaroring,31,14.0
+2025,Hungaroring,55,15.0
+2025,Hungaroring,1,17.0
+2025,Hungaroring,81,18.0
+2025,Hungaroring,16,19.0
+2025,Hungaroring,63,19.0
+2025,Hungaroring,22,20.0
+2025,Hungaroring,12,21.0
+2025,Hungaroring,87,30.0
+2025,Hungaroring,4,31.0
+2025,Hungaroring,10,32.0
+2025,Hungaroring,6,33.0
+2025,Hungaroring,43,35.0
+2025,Hungaroring,18,36.0
+2025,Hungaroring,22,37.0
+2025,Hungaroring,23,38.0
+2025,Hungaroring,14,39.0
+2025,Hungaroring,16,40.0
+2025,Hungaroring,5,40.0
+2025,Hungaroring,30,40.0
+2025,Hungaroring,27,41.0
+2025,Hungaroring,44,42.0
+2025,Hungaroring,63,43.0
+2025,Hungaroring,81,45.0
+2025,Hungaroring,1,48.0
+2025,Hungaroring,55,51.0
+2025,Zandvoort,18,8.0
+2025,Zandvoort,14,18.0
+2025,Zandvoort,22,19.0
+2025,Zandvoort,43,19.0
+2025,Zandvoort,27,19.0
+2025,Zandvoort,16,22.0
+2025,Zandvoort,5,22.0
+2025,Zandvoort,81,23.0
+2025,Zandvoort,4,23.0
+2025,Zandvoort,1,23.0
+2025,Zandvoort,6,23.0
+2025,Zandvoort,63,23.0
+2025,Zandvoort,30,23.0
+2025,Zandvoort,55,23.0
+2025,Zandvoort,23,23.0
+2025,Zandvoort,12,23.0
+2025,Zandvoort,10,23.0
+2025,Zandvoort,30,27.0
+2025,Zandvoort,55,27.0
+2025,Zandvoort,14,40.0
+2025,Zandvoort,12,51.0
+2025,Zandvoort,16,52.0
+2025,Zandvoort,55,51.0
+2025,Zandvoort,18,52.0
+2025,Zandvoort,31,52.0
+2025,Zandvoort,81,53.0
+2025,Zandvoort,4,53.0
+2025,Zandvoort,1,53.0
+2025,Zandvoort,6,53.0
+2025,Zandvoort,63,53.0
+2025,Zandvoort,23,53.0
+2025,Zandvoort,30,52.0
+2025,Zandvoort,12,53.0
+2025,Zandvoort,87,53.0
+2025,Zandvoort,22,53.0
+2025,Zandvoort,43,53.0
+2025,Zandvoort,27,53.0
+2025,Zandvoort,5,60.0
+2025,Zandvoort,43,65.0
+2025,Zandvoort,55,65.0
+2025,Monza,30,9.0
+2025,Monza,87,18.0
+2025,Monza,22,19.0
+2025,Monza,14,20.0
+2025,Monza,5,20.0
+2025,Monza,63,27.0
+2025,Monza,12,28.0
+2025,Monza,55,30.0
+2025,Monza,6,32.0
+2025,Monza,16,33.0
+2025,Monza,43,33.0
+2025,Monza,1,37.0
+2025,Monza,44,38.0
+2025,Monza,23,41.0
+2025,Monza,81,45.0
+2025,Monza,4,46.0
+2025,Monza,10,49.0
+2025,Monza,18,49.0
+2025,Monza,31,51.0
+2025,Baku,31,1.0
+2025,Baku,23,1.0
+2025,Baku,31,2.0
+2025,Baku,23,15.0
+2025,Baku,43,16.0
+2025,Baku,12,18.0
+2025,Baku,16,19.0
+2025,Baku,30,20.0
+2025,Baku,14,21.0
+2025,Baku,5,26.0
+2025,Baku,55,27.0
+2025,Baku,87,28.0
+2025,Baku,6,29.0
+2025,Baku,10,35.0
+2025,Baku,44,36.0
+2025,Baku,27,36.0
+2025,Baku,4,37.0
+2025,Baku,18,37.0
+2025,Baku,22,38.0
+2025,Baku,63,39.0
+2025,Baku,1,40.0
+2025,Singapore,22,13.0
+2025,Singapore,5,13.0
+2025,Singapore,43,14.0
+2025,Singapore,1,19.0
+2025,Singapore,6,20.0
+2025,Singapore,16,21.0
+2025,Singapore,87,23.0
+2025,Singapore,44,24.0
+2025,Singapore,10,24.0
+2025,Singapore,63,25.0
+2025,Singapore,12,25.0
+2025,Singapore,27,25.0
+2025,Singapore,4,26.0
+2025,Singapore,81,27.0
+2025,Singapore,14,27.0
+2025,Singapore,31,30.0
+2025,Singapore,18,38.0
+2025,Singapore,23,42.0
+2025,Singapore,27,44.0
+2025,Singapore,44,46.0
+2025,Singapore,30,48.0
+2025,Singapore,55,50.0
+2025,Singapore,10,51.0
+2025,Austin,23,7.0
+2025,Austin,5,14.0
+2025,Austin,16,22.0
+2025,Austin,31,24.0
+2025,Austin,10,27.0
+2025,Austin,18,28.0
+2025,Austin,6,28.0
+2025,Austin,22,29.0
+2025,Austin,81,30.0
+2025,Austin,87,30.0
+2025,Austin,14,30.0
+2025,Austin,30,30.0
+2025,Austin,44,31.0
+2025,Austin,12,31.0
+2025,Austin,4,32.0
+2025,Austin,43,32.0
+2025,Austin,1,33.0
+2025,Austin,63,33.0
+2025,Austin,27,33.0
+2025,Austin,23,36.0
+2025,Austin,5,36.0
+2025,Mexico City,30,2.0
+2025,Mexico City,55,17.0
+2025,Mexico City,14,20.0
+2025,Mexico City,12,22.0
+2025,Mexico City,44,23.0
+2025,Mexico City,87,24.0
+2025,Mexico City,81,24.0
+2025,Mexico City,63,25.0
+2025,Mexico City,18,26.0
+2025,Mexico City,31,27.0
+2025,Mexico City,16,31.0
+2025,Mexico City,10,33.0
+2025,Mexico City,4,34.0
+2025,Mexico City,6,34.0
+2025,Mexico City,22,36.0
+2025,Mexico City,1,37.0
+2025,Mexico City,5,37.0
+2025,Mexico City,23,41.0
+2025,Mexico City,18,43.0
+2025,Mexico City,55,46.0
+2025,Mexico City,81,47.0
+2025,Mexico City,12,47.0
+2025,Mexico City,44,47.0
+2025,Mexico City,87,48.0
+2025,Mexico City,63,48.0
+2025,Mexico City,43,48.0
+2025,Mexico City,55,56.0
+2025,Interlagos,22,2.0
+2025,Interlagos,44,2.0
+2025,Interlagos,1,7.0
+2025,Interlagos,31,8.0
+2025,Interlagos,44,14.0
+2025,Interlagos,87,17.0
+2025,Interlagos,55,17.0
+2025,Interlagos,6,18.0
+2025,Interlagos,10,18.0
+2025,Interlagos,30,19.0
+2025,Interlagos,12,21.0
+2025,Interlagos,22,24.0
+2025,Interlagos,14,28.0
+2025,Interlagos,43,29.0
+2025,Interlagos,18,29.0
+2025,Interlagos,4,30.0
+2025,Interlagos,44,32.0
+2025,Interlagos,63,34.0
+2025,Interlagos,1,34.0
+2025,Interlagos,23,35.0
+2025,Interlagos,27,36.0
+2025,Interlagos,6,37.0
+2025,Interlagos,87,42.0
+2025,Interlagos,43,43.0
+2025,Interlagos,14,46.0
+2025,Interlagos,12,47.0
+2025,Interlagos,31,47.0
+2025,Interlagos,22,47.0
+2025,Interlagos,63,48.0
+2025,Interlagos,4,50.0
+2025,Interlagos,81,51.0
+2025,Interlagos,1,54.0
+2025,Interlagos,18,54.0
+2025,Interlagos,23,55.0
+2025,Las Vegas,22,1.0
+2025,Las Vegas,5,1.0
+2025,Las Vegas,12,2.0
+2025,Las Vegas,10,2.0
+2025,Las Vegas,30,2.0
+2025,Las Vegas,23,13.0
+2025,Las Vegas,23,14.0
+2025,Las Vegas,14,16.0
+2025,Las Vegas,63,17.0
+2025,Las Vegas,87,17.0
+2025,Las Vegas,6,20.0
+2025,Las Vegas,81,21.0
+2025,Las Vegas,4,22.0
+2025,Las Vegas,55,22.0
+2025,Las Vegas,16,24.0
+2025,Las Vegas,1,25.0
+2025,Las Vegas,43,25.0
+2025,Las Vegas,31,27.0
+2025,Las Vegas,22,27.0
+2025,Las Vegas,30,28.0
+2025,Las Vegas,44,29.0
+2025,Las Vegas,27,30.0
+2025,Las Vegas,23,34.0

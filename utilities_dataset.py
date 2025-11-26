@@ -2812,3 +2812,244 @@ def clean_combined_data(
     print(f"Final columns ({len(df_clean.columns)}): {list(df_clean.columns)}")
     
     return df_clean
+
+# ============================================================
+# OPENF1 PIT STOP DATA - Fetch and Merge
+# ============================================================
+
+def map_openf1_gp_to_race_name(gp_name):
+    """
+    Map OpenF1 circuit names to standard race_name format.
+    
+    Example: 'Sakhir' -> 'Bahrain_Grand_Prix', 'Catalunya' -> 'Spanish_Grand_Prix'
+    """
+    if pd.isna(gp_name):
+        return None
+    
+    gp_name = str(gp_name).strip()
+    
+    # Map from OpenF1 circuit names to race_name format
+    # These are the same as race control circuit names
+    mapping = {
+        'Sakhir': 'Bahrain_Grand_Prix',
+        'Jeddah': 'Saudi_Arabian_Grand_Prix',
+        'Melbourne': 'Australian_Grand_Prix',
+        'Suzuka': 'Japanese_Grand_Prix',
+        'Shanghai': 'Chinese_Grand_Prix',
+        'Miami': 'Miami_Grand_Prix',
+        'Imola': 'Emilia_Romagna_Grand_Prix',
+        'Monte Carlo': 'Monaco_Grand_Prix',
+        'Catalunya': 'Spanish_Grand_Prix',
+        'Montreal': 'Canadian_Grand_Prix',
+        'Spielberg': 'Austrian_Grand_Prix',
+        'Silverstone': 'British_Grand_Prix',
+        'Hungaroring': 'Hungarian_Grand_Prix',
+        'Spa-Francorchamps': 'Belgian_Grand_Prix',
+        'Zandvoort': 'Dutch_Grand_Prix',
+        'Monza': 'Italian_Grand_Prix',
+        'Baku': 'Azerbaijan_Grand_Prix',
+        'Singapore': 'Singapore_Grand_Prix',
+        'Austin': 'United_States_Grand_Prix',
+        'Mexico City': 'Mexico_City_Grand_Prix',
+        'Interlagos': 'Sao_Paulo_Grand_Prix',
+        'Las Vegas': 'Las_Vegas_Grand_Prix',
+        'Yas Marina Circuit': 'Abu_Dhabi_Grand_Prix',
+        'Lusail': 'Qatar_Grand_Prix',
+    }
+    
+    # Check for exact match
+    if gp_name in mapping:
+        return mapping[gp_name]
+    
+    # Check case-insensitive
+    for key, value in mapping.items():
+        if key.lower() == gp_name.lower():
+            return value
+    
+    return None
+
+
+def fetch_openf1_pit_for_years(
+    years=(2023, 2024, 2025),               
+    max_retries=3,
+    base_delay=2,
+    progress=True
+):
+    """
+    Pulls OpenF1 pit events for all RACE sessions in the given years.
+    No external helpers required.
+
+    Returns
+    -------
+    pd.DataFrame
+        One row per pit event with useful session/meeting metadata attached.
+    """
+    all_rows = []
+    sessions_base = "https://api.openf1.org/v1/sessions"
+    pit_base = "https://api.openf1.org/v1/pit"
+
+    for y in years:
+        # 1) discover RACE sessions for the year
+        sess_url = f"{sessions_base}?year={y}&session_name=Race"
+        if progress: 
+            print(f"\nYear {y}: fetching race sessions…", end=" ")
+
+        with urlopen(sess_url) as resp:
+            sessions = json.loads(resp.read().decode("utf-8"))
+
+        if progress: 
+            print(f"{len(sessions)} sessions")
+
+        # 2) for each session, fetch pits (with retries)
+        for i, s in enumerate(sessions, 1):
+            session_key = s.get("session_key")
+            if not session_key:
+                continue
+
+            # prefer meeting_name; fall back to circuit short name
+            gp_name = s.get("meeting_name") or s.get("circuit_short_name") or "UnknownGP"
+            meeting_key = s.get("meeting_key")
+            round_no = s.get("meeting_round") or s.get("meeting_official_name")
+
+            url = f"{pit_base}?session_key={session_key}"
+
+            for attempt in range(max_retries):
+                try:
+                    if progress:
+                        print(f"  [{i}/{len(sessions)}] {gp_name} (session_key={session_key}) …", end=" ")
+
+                    with urlopen(url) as resp:
+                        data = json.loads(resp.read().decode("utf-8"))
+
+                    # attach metadata
+                    for row in data:
+                        row["season_year"]     = y
+                        row["grand_prix"]      = gp_name
+                        row["race_session_key"]= session_key
+                        row["meeting_key"]     = meeting_key
+                        row["round"]           = round_no
+                    all_rows.extend(data)
+
+                    if progress: 
+                        print(f"✓ {len(data)} rows")
+                    time.sleep(base_delay)  # gentle on API
+                    break
+
+                except Exception as e:
+                    if hasattr(e, 'code') and e.code == 429 and attempt < max_retries - 1:
+                        wait = base_delay * (2 ** attempt)
+                        if progress: 
+                            print(f"429 rate limit → retry in {wait}s")
+                        time.sleep(wait)
+                        continue
+                    else:
+                        if progress: 
+                            print(f"Error: {e}")
+                        break
+
+    df = pd.DataFrame(all_rows)
+    if not df.empty:
+        # parse timestamp and order useful columns if present
+        if "date" in df.columns:
+            df["date"] = pd.to_datetime(df["date"], utc=True, errors="coerce")
+        preferred = [
+            "season_year","round","grand_prix","race_session_key","meeting_key",
+            "date","driver_number","lap_number","pit_duration"
+        ]
+        df = df[[c for c in preferred if c in df.columns] + [c for c in df.columns if c not in preferred]]
+
+    return df
+
+def merge_pit_stops_to_clean_dataset(df_clean, df_pits=None):
+    """
+    Merge OpenF1 pit stop data into the cleaned dataset.
+    
+    Parameters:
+    -----------
+    df_clean : pd.DataFrame
+        The cleaned dataset (output from clean_combined_data)
+    df_pits : pd.DataFrame, optional
+        Pre-loaded pit data. If None, loads from csv_output/openf1_pit_2023_2025.csv
+    
+    Returns:
+    --------
+    pd.DataFrame
+        Dataset with added 'PitStop' column (boolean)
+    """
+    # Load pit data from CSV if not provided
+    if df_pits is None:
+        csv_path = "csv_output/openf1_pit_2023_2025.csv"
+        print(f"Loading pit data from {csv_path}")
+        df_pits = pd.read_csv(csv_path)
+    
+    # Map grand_prix names to standard format
+    df_pits['grand_prix_mapped'] = df_pits['grand_prix'].apply(map_openf1_gp_to_race_name)
+    
+    # Remove unmapped entries
+    unmapped_count = df_pits['grand_prix_mapped'].isna().sum()
+    if unmapped_count > 0:
+        print(f"Warning: {unmapped_count} pit stops with unmapped grand prix names")
+        df_pits = df_pits[df_pits['grand_prix_mapped'].notna()]
+    
+    # Rename columns to match cleaned dataset
+    df_pits = df_pits.rename(columns={
+        'season_year': 'year',
+        'driver_number': 'RacingNumber',
+        'grand_prix_mapped': 'Grand_Prix'
+    })
+    
+    # Add PitStop indicator
+    df_pits['PitStop'] = True
+    
+    # Keep only merge keys
+    df_pits = df_pits[['year', 'Grand_Prix', 'RacingNumber', 'lap_number', 'PitStop']].drop_duplicates()
+    
+    # Merge with cleaned dataset
+    df_merged = pd.merge(
+        df_clean,
+        df_pits,
+        on=['year', 'Grand_Prix', 'RacingNumber', 'lap_number'],
+        how='left'
+    )
+    
+    # Fill NaN with False (no pit stop)
+    df_merged['PitStop'] = df_merged['PitStop'].fillna(False).astype(bool)
+    
+    # Add Pit_Out: Mark the lap AFTER each pit stop
+    df_merged['Pit_Out'] = False
+    
+    # Store original order columns
+    sort_columns = ['year', 'round', 'Grand_Prix', 'RacingNumber', 'lap_number']
+    
+    # Sort to ensure correct ordering for pit-out detection
+    df_merged = df_merged.sort_values(sort_columns).reset_index(drop=True)
+    
+    # For each driver in each race, mark the lap after PitStop as Pit_Out
+    for (year, rnd, gp, driver), group_idx in df_merged.groupby(['year', 'round', 'Grand_Prix', 'RacingNumber']).groups.items():
+        driver_data = df_merged.loc[group_idx]
+        
+        # Find rows where PitStop = True
+        pit_stop_rows = driver_data[driver_data['PitStop'] == True]
+        
+        for pit_idx in pit_stop_rows.index:
+            # Find the next row (same driver, next lap)
+            next_rows = df_merged[(df_merged.index > pit_idx) & 
+                                   (df_merged['year'] == year) &
+                                   (df_merged['round'] == rnd) &
+                                   (df_merged['Grand_Prix'] == gp) &
+                                   (df_merged['RacingNumber'] == driver)]
+            
+            if len(next_rows) > 0:
+                next_idx = next_rows.index[0]
+                df_merged.loc[next_idx, 'Pit_Out'] = True
+    
+    # Maintain original sorting order
+    df_merged = df_merged.sort_values(sort_columns).reset_index(drop=True)
+    
+    # Summary
+    pit_stop_count = df_merged['PitStop'].sum()
+    pit_out_count = df_merged['Pit_Out'].sum()
+    print(f"\n✓ Merged {pit_stop_count:,} pit stops from OpenF1")
+    print(f"✓ Identified {pit_out_count:,} pit-out laps")
+    
+    return df_merged
