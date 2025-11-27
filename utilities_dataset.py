@@ -2737,10 +2737,9 @@ def clean_combined_data(
 ):
     """
     Clean the combined dataset by removing unnecessary columns and reordering.
-    Adds PitIn/PitOut indicators based on stint changes.
     
     Input: Combined dataset with all columns
-    Output: Cleaned dataset with only modeling-relevant columns + PitIn/PitOut flags
+    Output: Cleaned dataset with only modeling-relevant columns
     """
     df_clean = df_combined.copy()
     
@@ -2751,34 +2750,10 @@ def clean_combined_data(
     # Determine race column name (use whatever exists)
     race_col = 'Grand_Prix' if 'Grand_Prix' in df_clean.columns else 'race_name'
     
-    # Sort by driver and lap number to ensure correct ordering for pit stop detection
+    # Sort by driver and lap number for consistency
     df_clean = df_clean.sort_values(['year', 'round', race_col, 'RacingNumber', 'lap_number']).reset_index(drop=True)
     
-    # Create PitOut indicator: First lap of new stint (with fresh tires)
-    # PitOut = TRUE when LapInStint == 1 (first lap after pit stop)
-    if 'LapInStint' in df_clean.columns:
-        df_clean['PitOut'] = (df_clean['LapInStint'] == 1).astype(bool)
-    else:
-        df_clean['PitOut'] = False
-    
-    # Create PitIn indicator: Last lap before stint changes
-    # Compare current stint with next lap's stint for same driver
-    df_clean['PitIn'] = False
-    
-    # Group by driver (year, round, race, RacingNumber) to detect stint changes
-    for (year, rnd, gp, driver), group_idx in df_clean.groupby(['year', 'round', race_col, 'RacingNumber']).groups.items():
-        driver_data = df_clean.loc[group_idx].copy()
-        
-        # Shift Stint column to get next lap's stint
-        next_stint = driver_data['Stint'].shift(-1)
-        
-        # PitIn = TRUE when current Stint != next Stint (and next stint is not NaN)
-        pit_in_mask = (driver_data['Stint'] != next_stint) & (next_stint.notna())
-        
-        # Update PitIn for this driver
-        df_clean.loc[group_idx[pit_in_mask], 'PitIn'] = True
-    
-    # Remove unnecessary columns
+    # Remove unnecessary columns (keep LapInStint for fallback pit detection)
     columns_to_drop = [
         'name', 'countryId', 'Time', 'NumberOfPitStops', 'TyresNotChanged',
         'track_limit', 'off_track', 'message', 'flag_upper',
@@ -2790,9 +2765,9 @@ def clean_combined_data(
     column_order = [
         'year', 'round', 'Grand_Prix', 'Name', 'RacingNumber', 'Team',
         'lap_number', 'LapTime', 'IntervalToPositionAhead', 'Position',
-        'Stint', 'Compound', 'New','LapInStint', 'AirTemp', 'Humidity', 'Pressure', 
-        'TrackTemp', 'WindDirection', 'WindSpeed', 'Rainfall',
-        'any_violation', 'lap_clean','PitIn', 'PitOut'
+        'Stint', 'Compound', 'New', 'LapInStint',
+        'AirTemp', 'Humidity', 'Pressure', 'TrackTemp', 'WindDirection', 'WindSpeed', 'Rainfall',
+        'any_violation', 'lap_clean'
     ]
     df_clean = df_clean[[col for col in column_order if col in df_clean.columns]]
     
@@ -2800,22 +2775,15 @@ def clean_combined_data(
     if 'Rainfall' in df_clean.columns:
         df_clean['Rainfall'] = df_clean['Rainfall'].astype('bool')
     
-    # Summary statistics
-    pit_in_count = df_clean['PitIn'].sum() if 'PitIn' in df_clean.columns else 0
-    pit_out_count = df_clean['PitOut'].sum() if 'PitOut' in df_clean.columns else 0
-    
     df_clean.to_excel(output_file, index=False)
     print(f"\nCleaned data saved to {output_file}")
     print(f"Total rows: {len(df_clean):,}")
-    print(f"PitIn laps: {pit_in_count:,}")
-    print(f"PitOut laps: {pit_out_count:,}")
     print(f"Final columns ({len(df_clean.columns)}): {list(df_clean.columns)}")
     
     return df_clean
 
-# ============================================================
+
 # OPENF1 PIT STOP DATA - Fetch and Merge
-# ============================================================
 
 def map_openf1_gp_to_race_name(gp_name):
     """
@@ -2851,7 +2819,7 @@ def map_openf1_gp_to_race_name(gp_name):
         'Singapore': 'Singapore_Grand_Prix',
         'Austin': 'United_States_Grand_Prix',
         'Mexico City': 'Mexico_City_Grand_Prix',
-        'Interlagos': 'Sao_Paulo_Grand_Prix',
+        'Interlagos': 'São_Paulo_Grand_Prix',
         'Las Vegas': 'Las_Vegas_Grand_Prix',
         'Yas Marina Circuit': 'Abu_Dhabi_Grand_Prix',
         'Lusail': 'Qatar_Grand_Prix',
@@ -2960,9 +2928,10 @@ def fetch_openf1_pit_for_years(
 
     return df
 
-def merge_pit_stops_to_clean_dataset(df_clean, df_pits=None):
+def merge_pit_stops_to_clean_dataset(df_clean, df_pits=None, use_stint_fallback=True):
     """
     Merge OpenF1 pit stop data into the cleaned dataset.
+    Falls back to stint-based detection for races without OpenF1 data.
     
     Parameters:
     -----------
@@ -2970,16 +2939,18 @@ def merge_pit_stops_to_clean_dataset(df_clean, df_pits=None):
         The cleaned dataset (output from clean_combined_data)
     df_pits : pd.DataFrame, optional
         Pre-loaded pit data. If None, loads from csv_output/openf1_pit_2023_2025.csv
+    use_stint_fallback : bool, default True
+        Use LapInStint/Stint changes to detect pit stops for races without OpenF1 data
     
     Returns:
     --------
     pd.DataFrame
-        Dataset with added 'PitStop' column (boolean)
+        Dataset with added 'PitStop' and 'Pit_Out' columns (boolean)
     """
     # Load pit data from CSV if not provided
     if df_pits is None:
         csv_path = "csv_output/openf1_pit_2023_2025.csv"
-        print(f"Loading pit data from {csv_path}")
+        print(f"Loading pit data from {csv_path}...")
         df_pits = pd.read_csv(csv_path)
     
     # Map grand_prix names to standard format
@@ -3012,19 +2983,59 @@ def merge_pit_stops_to_clean_dataset(df_clean, df_pits=None):
         how='left'
     )
     
-    # Fill NaN with False (no pit stop)
-    df_merged['PitStop'] = df_merged['PitStop'].fillna(False).astype(bool)
-    
-    # Add Pit_Out: Mark the lap AFTER each pit stop
-    df_merged['Pit_Out'] = False
-    
     # Store original order columns
     sort_columns = ['year', 'round', 'Grand_Prix', 'RacingNumber', 'lap_number']
     
-    # Sort to ensure correct ordering for pit-out detection
+    # Sort to ensure correct ordering
     df_merged = df_merged.sort_values(sort_columns).reset_index(drop=True)
     
-    # For each driver in each race, mark the lap after PitStop as Pit_Out
+    # Initialize PitStop and Pit_Out columns properly
+    # Keep NaN from merge to identify races without OpenF1 data
+    has_openf1_data = df_merged['PitStop'].notna()
+    
+    # Identify races with OpenF1 data vs those needing fallback
+    if use_stint_fallback and 'LapInStint' in df_merged.columns and 'Stint' in df_merged.columns:
+        # Check which races have ANY OpenF1 pit data
+        races_with_data = df_merged[has_openf1_data].groupby(['year', 'round', 'Grand_Prix']).size()
+        all_races = df_merged.groupby(['year', 'round', 'Grand_Prix']).size()
+        races_without_pits = all_races.index.difference(races_with_data.index)
+        
+        if len(races_without_pits) > 0:
+            print(f"\n {len(races_without_pits)} races without OpenF1 data - using stint-based fallback:")
+            
+            for year, rnd, gp in races_without_pits:
+                race_mask = (df_merged['year'] == year) & \
+                           (df_merged['round'] == rnd) & \
+                           (df_merged['Grand_Prix'] == gp)
+                
+                # PitStop: Last lap of stint (when stint changes)
+                for (_, _, _, driver), group_idx in df_merged[race_mask].groupby(['year', 'round', 'Grand_Prix', 'RacingNumber']).groups.items():
+                    driver_data = df_merged.loc[group_idx]
+                    next_stint = driver_data['Stint'].shift(-1)
+                    pit_in_mask = (driver_data['Stint'] != next_stint) & (next_stint.notna())
+                    
+                    # Set PitStop to True for stint changes
+                    pit_indices = driver_data.index[pit_in_mask]
+                    df_merged.loc[pit_indices, 'PitStop'] = True
+                
+                # Pit_Out: First lap of new stint (LapInStint == 1, but not lap 1 of race)
+                pit_out_indices = df_merged[race_mask & (df_merged['LapInStint'] == 1) & (df_merged['lap_number'] > 1)].index
+                df_merged.loc[pit_out_indices, 'Pit_Out'] = True
+                
+                fallback_pits = int(df_merged.loc[df_merged[race_mask].index, 'PitStop'].fillna(False).sum())
+                fallback_outs = len(pit_out_indices)
+                print(f"   {year} Round {rnd} - {gp}: {fallback_pits} pit stops, {fallback_outs} pit-outs (stint-based)")
+    
+    # Now fill remaining NaN with False and convert to bool
+    df_merged['PitStop'] = df_merged['PitStop'].fillna(False).astype(bool)
+    
+    # Initialize Pit_Out if not already set
+    if 'Pit_Out' not in df_merged.columns:
+        df_merged['Pit_Out'] = False
+    else:
+        df_merged['Pit_Out'] = df_merged['Pit_Out'].fillna(False)
+    
+    # For races WITH OpenF1 data: mark pit-out laps (lap after PitStop)
     for (year, rnd, gp, driver), group_idx in df_merged.groupby(['year', 'round', 'Grand_Prix', 'RacingNumber']).groups.items():
         driver_data = df_merged.loc[group_idx]
         
@@ -3043,13 +3054,18 @@ def merge_pit_stops_to_clean_dataset(df_clean, df_pits=None):
                 next_idx = next_rows.index[0]
                 df_merged.loc[next_idx, 'Pit_Out'] = True
     
+    # Convert Pit_Out to boolean
+    df_merged['Pit_Out'] = df_merged['Pit_Out'].astype(bool)
+    
     # Maintain original sorting order
     df_merged = df_merged.sort_values(sort_columns).reset_index(drop=True)
     
     # Summary
     pit_stop_count = df_merged['PitStop'].sum()
     pit_out_count = df_merged['Pit_Out'].sum()
-    print(f"\n✓ Merged {pit_stop_count:,} pit stops from OpenF1")
-    print(f"✓ Identified {pit_out_count:,} pit-out laps")
+    openf1_pit_count = pit_stop_count  # Track original count before fallback
+    
+    print(f"\n✓ Total pit stops: {pit_stop_count:,}")
+    print(f"✓ Total pit-out laps: {pit_out_count:,}")
     
     return df_merged
