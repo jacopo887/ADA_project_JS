@@ -2755,7 +2755,7 @@ def clean_combined_data(
     
     # Remove unnecessary columns (keep LapInStint for fallback pit detection)
     columns_to_drop = [
-        'name', 'countryId', 'Time', 'NumberOfPitStops', 'TyresNotChanged',
+        'countryId', 'Time', 'NumberOfPitStops', 'TyresNotChanged',
         'track_limit', 'off_track', 'message', 'flag_upper',
         'sc_deploy', 'sc_end', 'vsc_deploy', 'vsc_end', 'is_yellow', 'is_double_yellow', 'is_red'
     ]
@@ -2763,7 +2763,7 @@ def clean_combined_data(
     
     # Reorder columns for better readability
     column_order = [
-        'year', 'round', 'Grand_Prix', 'Name', 'RacingNumber', 'Team',
+        'year', 'round', 'name', 'Grand_Prix', 'Name', 'RacingNumber', 'Team',
         'lap_number', 'LapTime', 'IntervalToPositionAhead', 'Position',
         'Stint', 'Compound', 'New', 'LapInStint',
         'AirTemp', 'Humidity', 'Pressure', 'TrackTemp', 'WindDirection', 'WindSpeed', 'Rainfall',
