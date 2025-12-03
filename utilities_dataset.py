@@ -2836,7 +2836,197 @@ def map_openf1_gp_to_race_name(gp_name):
     
     return None
 
+def fetch_openf1_pit_and_stints_for_years(
+    years=(2023, 2024, 2025),               
+    max_retries=3,
+    base_delay=2,
+    progress=True,
+    save_csv=True,
+    output_dir="csv_output"
+):
+    """
+    Pulls OpenF1 pit AND stint data for all RACE sessions in the given years.
+    Fetches both in a single pass to avoid duplicate API calls.
 
+    Parameters:
+    -----------
+    years : tuple of int
+        Years to fetch data for (default: 2023, 2024, 2025)
+    max_retries : int
+        Maximum retry attempts for failed requests (default: 3)
+    base_delay : int
+        Delay in seconds between requests (default: 2)
+    progress : bool
+        Print progress messages (default: True)
+    save_csv : bool
+        Save CSVs for pits and stints (default: True)
+    output_dir : str
+        Directory to save CSV files (default: "csv_output")
+
+    Returns
+    -------
+    tuple (pd.DataFrame, pd.DataFrame)
+        (df_pits, df_stints) - DataFrames for pit stops and stints
+    """
+    all_pits = []
+    all_stints = []
+    
+    sessions_base = "https://api.openf1.org/v1/sessions"
+    pit_base = "https://api.openf1.org/v1/pit"
+    stint_base = "https://api.openf1.org/v1/stints"
+
+    for y in years:
+        # 1) Discover RACE sessions for the year
+        sess_url = f"{sessions_base}?year={y}&session_name=Race"
+        if progress: 
+            print(f"\n{'='*60}")
+            print(f"Year {y}: fetching race sessions…", end=" ")
+
+        try:
+            with urlopen(sess_url) as resp:
+                sessions = json.loads(resp.read().decode("utf-8"))
+        except Exception as e:
+            if progress:
+                print(f"Error fetching sessions: {e}")
+            continue
+
+        if progress: 
+            print(f"{len(sessions)} sessions")
+
+        # 2) For each session, fetch BOTH pits and stints
+        for i, s in enumerate(sessions, 1):
+            session_key = s.get("session_key")
+            if not session_key:
+                continue
+
+            # Use circuit_short_name for mapping consistency
+            gp_name = s.get("circuit_short_name") or s.get("meeting_name") or "UnknownGP"
+            meeting_key = s.get("meeting_key")
+            round_no = s.get("meeting_round") or i
+
+            if progress:
+                print(f"  [{i}/{len(sessions)}] {gp_name} (session_key={session_key})")
+
+            # --- Fetch PIT data ---
+            pit_url = f"{pit_base}?session_key={session_key}"
+            for attempt in range(max_retries):
+                try:
+                    if progress:
+                        print(f"      Pits …", end=" ")
+                    with urlopen(pit_url) as resp:
+                        pit_data = json.loads(resp.read().decode("utf-8"))
+                    
+                    for row in pit_data:
+                        row["season_year"] = y
+                        row["grand_prix"] = gp_name
+                        row["grand_prix_mapped"] = map_openf1_gp_to_race_name(gp_name)
+                        row["race_session_key"] = session_key
+                        row["meeting_key"] = meeting_key
+                        row["round"] = round_no
+                    all_pits.extend(pit_data)
+                    
+                    if progress: 
+                        print(f"✓ {len(pit_data)}", end=" | ")
+                    break
+                except Exception as e:
+                    if hasattr(e, 'code') and e.code == 429 and attempt < max_retries - 1:
+                        wait = base_delay * (2 ** attempt)
+                        if progress: 
+                            print(f"429 → retry in {wait}s")
+                        time.sleep(wait)
+                    else:
+                        if progress: 
+                            print(f"Error: {e}", end=" | ")
+                        break
+
+            # --- Fetch STINT data ---
+            stint_url = f"{stint_base}?session_key={session_key}"
+            for attempt in range(max_retries):
+                try:
+                    if progress:
+                        print(f"Stints …", end=" ")
+                    with urlopen(stint_url) as resp:
+                        stint_data = json.loads(resp.read().decode("utf-8"))
+                    
+                    for row in stint_data:
+                        row["season_year"] = y
+                        row["grand_prix"] = gp_name
+                        row["grand_prix_mapped"] = map_openf1_gp_to_race_name(gp_name)
+                        row["race_session_key"] = session_key
+                        row["meeting_key"] = meeting_key
+                        row["round"] = round_no
+                    all_stints.extend(stint_data)
+                    
+                    if progress: 
+                        print(f"✓ {len(stint_data)}")
+                    break
+                except Exception as e:
+                    if hasattr(e, 'code') and e.code == 429 and attempt < max_retries - 1:
+                        wait = base_delay * (2 ** attempt)
+                        if progress: 
+                            print(f"429 → retry in {wait}s")
+                        time.sleep(wait)
+                    else:
+                        if progress: 
+                            print(f"Error: {e}")
+                        break
+            
+            time.sleep(base_delay)  # Gentle on API
+
+    # --- Build DataFrames ---
+    df_pits = pd.DataFrame(all_pits)
+    df_stints = pd.DataFrame(all_stints)
+    
+    # Process pits
+    if not df_pits.empty:
+        if "date" in df_pits.columns:
+            df_pits["date"] = pd.to_datetime(df_pits["date"], utc=True, errors="coerce")
+        preferred_pits = [
+            "season_year", "round", "grand_prix", "grand_prix_mapped",
+            "race_session_key", "meeting_key", "date", "driver_number", 
+            "lap_number", "pit_duration"
+        ]
+        df_pits = df_pits[[c for c in preferred_pits if c in df_pits.columns] + 
+                          [c for c in df_pits.columns if c not in preferred_pits]]
+        df_pits = df_pits.rename(columns={"season_year": "year"})
+    
+    # Process stints
+    if not df_stints.empty:
+        preferred_stints = [
+            "season_year", "round", "grand_prix", "grand_prix_mapped",
+            "driver_number", "stint_number", "compound", 
+            "lap_start", "lap_end", "tyre_age_at_start",
+            "race_session_key", "meeting_key"
+        ]
+        df_stints = df_stints[[c for c in preferred_stints if c in df_stints.columns] + 
+                               [c for c in df_stints.columns if c not in preferred_stints]]
+        df_stints = df_stints.rename(columns={"season_year": "year"})
+    
+    if progress:
+        print(f"\n{'='*60}")
+        print(f"✓ Total pits: {len(df_pits):,}")
+        print(f"✓ Total stints: {len(df_stints):,}")
+    
+    # Save CSVs
+    if save_csv:
+        os.makedirs(output_dir, exist_ok=True)
+        
+        if not df_pits.empty:
+            pits_path = os.path.join(output_dir, "openf1_pit_2023_2025.csv")
+            df_pits.to_csv(pits_path, index=False)
+            if progress:
+                print(f"  Saved: {pits_path}")
+        
+        if not df_stints.empty:
+            stints_path = os.path.join(output_dir, "openf1_stints_2023_2025.csv")
+            df_stints.to_csv(stints_path, index=False)
+            if progress:
+                print(f"  Saved: {stints_path}")
+    
+    return df_pits, df_stints
+
+
+# Backward-compatible wrapper for pit-only fetching
 def fetch_openf1_pit_for_years(
     years=(2023, 2024, 2025),               
     max_retries=3,
@@ -2845,88 +3035,33 @@ def fetch_openf1_pit_for_years(
 ):
     """
     Pulls OpenF1 pit events for all RACE sessions in the given years.
-    No external helpers required.
-
-    Returns
-    -------
-    pd.DataFrame
-        One row per pit event with useful session/meeting metadata attached.
+    (Wrapper around fetch_openf1_pit_and_stints_for_years for backward compatibility)
     """
-    all_rows = []
-    sessions_base = "https://api.openf1.org/v1/sessions"
-    pit_base = "https://api.openf1.org/v1/pit"
+    df_pits, _ = fetch_openf1_pit_and_stints_for_years(
+        years=years, max_retries=max_retries, base_delay=base_delay,
+        progress=progress, save_csv=False
+    )
+    return df_pits
 
-    for y in years:
-        # 1) discover RACE sessions for the year
-        sess_url = f"{sessions_base}?year={y}&session_name=Race"
-        if progress: 
-            print(f"\nYear {y}: fetching race sessions…", end=" ")
 
-        with urlopen(sess_url) as resp:
-            sessions = json.loads(resp.read().decode("utf-8"))
+# Wrapper for stint-only fetching
+def fetch_openf1_stints_for_years(
+    years=(2023, 2024, 2025),               
+    max_retries=3,
+    base_delay=2,
+    progress=True,
+    save_csv=False
+):
+    """
+    Pulls OpenF1 stint data for all RACE sessions in the given years.
+    (Wrapper around fetch_openf1_pit_and_stints_for_years)
+    """
+    _, df_stints = fetch_openf1_pit_and_stints_for_years(
+        years=years, max_retries=max_retries, base_delay=base_delay,
+        progress=progress, save_csv=save_csv
+    )
+    return df_stints
 
-        if progress: 
-            print(f"{len(sessions)} sessions")
-
-        # 2) for each session, fetch pits (with retries)
-        for i, s in enumerate(sessions, 1):
-            session_key = s.get("session_key")
-            if not session_key:
-                continue
-
-            # prefer meeting_name; fall back to circuit short name
-            gp_name = s.get("meeting_name") or s.get("circuit_short_name") or "UnknownGP"
-            meeting_key = s.get("meeting_key")
-            round_no = s.get("meeting_round") or s.get("meeting_official_name")
-
-            url = f"{pit_base}?session_key={session_key}"
-
-            for attempt in range(max_retries):
-                try:
-                    if progress:
-                        print(f"  [{i}/{len(sessions)}] {gp_name} (session_key={session_key}) …", end=" ")
-
-                    with urlopen(url) as resp:
-                        data = json.loads(resp.read().decode("utf-8"))
-
-                    # attach metadata
-                    for row in data:
-                        row["season_year"]     = y
-                        row["grand_prix"]      = gp_name
-                        row["race_session_key"]= session_key
-                        row["meeting_key"]     = meeting_key
-                        row["round"]           = round_no
-                    all_rows.extend(data)
-
-                    if progress: 
-                        print(f"✓ {len(data)} rows")
-                    time.sleep(base_delay)  # gentle on API
-                    break
-
-                except Exception as e:
-                    if hasattr(e, 'code') and e.code == 429 and attempt < max_retries - 1:
-                        wait = base_delay * (2 ** attempt)
-                        if progress: 
-                            print(f"429 rate limit → retry in {wait}s")
-                        time.sleep(wait)
-                        continue
-                    else:
-                        if progress: 
-                            print(f"Error: {e}")
-                        break
-
-    df = pd.DataFrame(all_rows)
-    if not df.empty:
-        # parse timestamp and order useful columns if present
-        if "date" in df.columns:
-            df["date"] = pd.to_datetime(df["date"], utc=True, errors="coerce")
-        preferred = [
-            "season_year","round","grand_prix","race_session_key","meeting_key",
-            "date","driver_number","lap_number","pit_duration"
-        ]
-        df = df[[c for c in preferred if c in df.columns] + [c for c in df.columns if c not in preferred]]
-
-    return df
 
 def merge_pit_stops_to_clean_dataset(df_clean, df_pits=None, use_stint_fallback=True):
     """
@@ -3069,3 +3204,125 @@ def merge_pit_stops_to_clean_dataset(df_clean, df_pits=None, use_stint_fallback=
     print(f"✓ Total pit-out laps: {pit_out_count:,}")
     
     return df_merged
+
+def merge_stints_to_clean_dataset(df_clean, df_stints=None):
+    """
+    Merge OpenF1 stint data into the cleaned dataset.
+    
+    Adds tire information for each lap based on stint ranges from OpenF1 data.
+    
+    Parameters:
+    -----------
+    df_clean : pd.DataFrame
+        The cleaned dataset with columns: year, round, Grand_Prix, RacingNumber, lap_number
+    df_stints : pd.DataFrame, optional
+        Pre-loaded stint data. If None, loads from csv_output/openf1_stints_2023_2025.csv
+        Expected columns: year, round, grand_prix_mapped, driver_number, 
+                         stint_number, compound, lap_start, lap_end, tyre_age_at_start
+    
+    Returns:
+    --------
+    pd.DataFrame
+        Dataset with added columns:
+        - Stint_OpenF1: Stint number (1, 2, 3, ...)
+        - Compound_OpenF1: Tire compound (SOFT, MEDIUM, HARD, ...)
+        - TyreAgeAtStart: Tire age at start of stint
+        - LapInStint_OpenF1: Progressive lap count within stint (1, 2, 3, ...)
+    """
+    df = df_clean.copy()
+    
+    # Load stint data from CSV if not provided
+    if df_stints is None:
+        csv_path = "csv_output/openf1_stints_2023_2025.csv"
+        print(f"Loading stint data from {csv_path}...")
+        df_stints = pd.read_csv(csv_path)
+    
+    # Make a copy to avoid modifying original
+    stints = df_stints.copy()
+    
+
+    stints = stints.rename(columns={
+        'grand_prix_mapped': 'Grand_Prix',
+        'driver_number': 'RacingNumber'
+    })
+    
+    # Initialize new columns with NaN
+    df['Stint'] = pd.NA
+    df['Compound'] = pd.NA
+    df['TyreAgeAtStart'] = pd.NA
+    df['LapInStint'] = pd.NA
+    
+    # Track statistics
+    matched_laps = 0
+    unmatched_laps = 0
+    
+    print("\nMerging stint data...")
+    
+    # Group stints by race and driver for efficient lookup
+    stint_groups = stints.groupby(['year', 'round', 'Grand_Prix', 'RacingNumber'])
+    
+    # Process each race-driver combination in clean dataset
+    for (year, rnd, gp, driver), group_idx in df.groupby(['year', 'round', 'Grand_Prix', 'RacingNumber']).groups.items():
+        
+        # Get stint data for this driver in this race
+        try:
+            driver_stints = stint_groups.get_group((year, rnd, gp, driver))
+        except KeyError:
+            # No stint data for this driver/race
+            unmatched_laps += len(group_idx)
+            continue
+        
+        # For each lap of this driver
+        for idx in group_idx:
+            lap_num = df.loc[idx, 'lap_number']
+            
+            # Find which stint this lap belongs to (lap_start <= lap_number <= lap_end)
+            matching_stint = driver_stints[
+                (driver_stints['lap_start'] <= lap_num) & 
+                (driver_stints['lap_end'] >= lap_num)
+            ]
+            
+            if len(matching_stint) > 0:
+                # Take the first matching stint (should only be one)
+                stint_row = matching_stint.iloc[0]
+                
+                df.loc[idx, 'Stint'] = stint_row['stint_number']
+                df.loc[idx, 'Compound'] = stint_row['compound']
+                df.loc[idx, 'TyreAgeAtStart'] = stint_row['tyre_age_at_start']
+                
+                # Calculate LapInStint: current lap - lap_start + 1
+                df.loc[idx, 'LapInStint'] = lap_num - stint_row['lap_start'] + 1
+                
+                matched_laps += 1
+            else:
+                unmatched_laps += 1
+    
+    # Convert columns to appropriate types
+    df['Stint'] = pd.to_numeric(df['Stint'], errors='coerce').astype('Int64')
+    df['TyreAgeAtStart'] = pd.to_numeric(df['TyreAgeAtStart'], errors='coerce').astype('Int64')
+    df['LapInStint'] = pd.to_numeric(df['LapInStint'], errors='coerce').astype('Int64')
+    
+    # Summary statistics
+    total_laps = len(df)
+    match_rate = (matched_laps / total_laps * 100) if total_laps > 0 else 0
+    
+    print(f"\n{'='*60}")
+    print(f"✓ Matched laps: {matched_laps:,} ({match_rate:.1f}%)")
+    print(f"✗ Unmatched laps: {unmatched_laps:,}")
+    print(f"  Total laps: {total_laps:,}")
+    
+    # Show compound distribution
+    compound_counts = df['Compound'].value_counts(dropna=False)
+    print(f"\nCompound distribution:")
+    for compound, count in compound_counts.items():
+        pct = count / total_laps * 100
+        print(f"  {compound}: {count:,} ({pct:.1f}%)")
+    
+    # Show stint distribution
+    stint_counts = df['Stint'].value_counts(dropna=False).sort_index()
+    print(f"\nStint distribution:")
+    for stint, count in stint_counts.items():
+        pct = count / total_laps * 100
+        print(f"  Stint {stint}: {count:,} ({pct:.1f}%)")
+    
+    return df
