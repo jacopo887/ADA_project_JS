@@ -1120,10 +1120,10 @@ def create_unique_circuits(input_file: str, output_dir: str = "csv_output"):
 CIRCUIT_TO_EVENT = {
     "austin": "United States", "bahrain": "Bahrain", "baku": "Azerbaijan",
     "catalunya": "Spanish", "catalunya_old": "Spanish", "hockenheimring": "German",
-    "hungaroring": "Hungarian", "imola": "Emilia Romagna", "interlagos": "Brazilian",
+    "hungaroring": "Hungarian", "imola": "Emilia Romagna", "interlagos": "São Paulo",
     "istanbul": "Turkish", "jeddah": "Saudi Arabian", "las-vegas": "Las Vegas",
     "lusail": "Qatar", "marina-bay": "Singapore", "marina-bay_old": "Singapore",
-    "melbourne": "Australian", "melbourne_old": "Australian", "mexico-city": "Mexican",
+    "melbourne": "Australian", "melbourne_old": "Australian", "mexico-city": "Mexico City",
     "miami": "Miami", "monaco": "Monaco", "montreal": "Canadian", "monza": "Italian",
     "nurburgring": "Eifel", "paul-ricard": "French", "portimao": "Portuguese",
     "shanghai": "Chinese", "silverstone": "British", "sochi": "Russian",

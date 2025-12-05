@@ -1,8 +1,4 @@
 circuitRef,year,round,name,type,num_drs_zones,length_km,num_turns,slow_corners,medium_corners,fast_corners,flat_corners,slow_cluster_max,straight_distance_m,straight_ratio,straight_len_max_m,n_major_straights,heavy_braking_zones,heavy_braking_mean_dv_kmh,hb_spacing_std_m,hb_at_end_of_max,corner_density_tpkm,avg_corner_angle,total_corner_angle,avg_corner_distance,drs_zones_detected,drs_total_len_m,drs_on_max
-interlagos,2024,21,José Carlos Pace,RACE,2,4.309,14,5,4,5,0,2,934.9,0.221,502.1,0,4,173.3,674.1,False,3.25,0.8,11.7,302.1,0.0,0.0,False
-las-vegas,2024,22,Las Vegas,STREET,2,6.201,17,6,5,6,0,3,3710.9,0.604,1348.2,2,10,192.9,656.3,False,2.74,9.4,159.3,361.6,2.0,1470.2850735846262,True
-lusail,2024,23,Lusail,RACE,1,5.419,16,5,6,5,0,3,2295.9,0.427,916.8,1,2,148.3,1274.4,False,2.95,-7.0,-112.1,335.9,2.0,1005.6915657448428,True
-yas-marina,2024,24,Yas Marina,RACE,2,5.281,19,6,7,6,0,2,1986.0,0.406,753.3,1,9,165.3,391.4,False,3.6,-5.7,-107.7,257.3,2.0,1863.9538895649705,True
 melbourne,2025,1,Melbourne,STREET,4,5.278,14,5,4,5,0,2,1866.8,0.356,627.7,0,5,152.1,1018.7,True,2.65,-0.4,-5.4,374.2,3.0,2686.755959637902,False
 shanghai,2025,2,Shanghai,RACE,2,5.451,16,5,6,5,0,2,2515.3,0.467,1117.3,1,6,204.8,648.9,True,2.94,-6.8,-108.7,336.8,3.0,1760.362487612148,True
 suzuka,2025,3,Suzuka,RACE,1,5.807,18,6,6,6,0,3,1985.5,0.344,1239.3,1,6,168.1,881.7,False,3.1,-176.6,-3178.4,320.4,2.0,1175.563480544859,False
@@ -22,4 +18,8 @@ monza,2025,16,Monza,RACE,2,5.793,11,4,3,4,0,2,3392.0,0.591,1151.6,2,6,196.7,686.
 baku,2025,17,Baku,STREET,2,6.003,20,8,5,7,0,4,3169.1,0.534,1080.1,2,10,169.3,616.2,False,3.33,-23.6,-472.0,296.8,3.0,1470.7732579795538,True
 marina-bay,2025,18,Marina Bay,STREET,4,4.94,19,6,7,6,0,2,1997.0,0.408,746.8,1,9,157.7,387.9,True,3.85,-5.7,-107.7,257.4,4.0,2404.7214953232715,True
 austin,2025,19,Americas,RACE,2,5.513,20,7,6,7,0,5,2130.3,0.391,1048.4,1,5,179.4,464.6,True,3.63,-58.2,-1163.3,272.5,3.0,1544.9140041944393,True
-mexico-city,2025,20,Hermanos Rodríguez,RACE,3,4.304,17,6,5,6,0,3,2039.5,0.481,2045.1,1,7,166.1,648.0,False,3.95,-58.9,-1002.1,249.6,,,False
+mexico-city,2025,20,Hermanos Rodríguez,RACE,3,4.304,17,6,5,6,0,3,2039.5,0.481,2045.1,1,7,166.1,648.0,False,3.95,-58.9,-1002.1,249.6,2.0,577.9902509118438,False
+interlagos,2025,21,José Carlos Pace,RACE,2,4.309,14,5,4,5,0,4,982.2,0.232,539.4,0,4,165.9,687.0,False,3.25,0.8,11.7,302.6,3.0,1433.7866375610436,True
+las-vegas,2025,22,Las Vegas,STREET,2,6.201,17,6,5,6,0,3,3629.5,0.591,1304.3,2,9,190.0,671.2,True,2.74,9.4,159.3,361.2,3.0,1571.2142415965254,True
+lusail,2025,23,Lusail,RACE,1,5.419,16,5,6,5,0,2,2235.3,0.415,931.8,1,3,142.0,725.4,False,2.95,-7.0,-112.1,337.0,3.0,1101.1756296972321,True
+yas-marina,2025,24,Yas Marina,RACE,2,5.281,19,6,7,6,0,2,1997.0,0.408,746.8,1,9,157.7,387.9,True,3.6,-5.7,-107.7,257.4,,,False
