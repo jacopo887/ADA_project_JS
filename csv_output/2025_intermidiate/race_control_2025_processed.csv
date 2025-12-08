@@ -52,6 +52,15 @@ lap_number,driver_number,grand_prix,flag_upper,sc_deploy,sc_end,vsc_deploy,vsc_e
 2,,Jeddah,DOUBLE YELLOW,False,False,False,False,True,True,False,False
 2,,Jeddah,DOUBLE YELLOW,False,False,False,False,True,True,False,False
 2,,Jeddah,DOUBLE YELLOW,False,False,False,False,True,True,False,False
+1,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False
+1,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
+1,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False
+1,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False
+2,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False
+2,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False
+16,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False
+7,,Lusail,DOUBLE YELLOW,False,False,False,False,True,True,False,False
+7,,Lusail,YELLOW,False,False,False,False,True,False,False,False
 1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
 1,,Melbourne,DOUBLE YELLOW,False,False,False,False,True,True,False,False
 1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
@@ -210,6 +219,7 @@ lap_number,driver_number,grand_prix,flag_upper,sc_deploy,sc_end,vsc_deploy,vsc_e
 70,,Spielberg,YELLOW,False,False,False,False,True,False,False,False
 70,,Spielberg,YELLOW,False,False,False,False,True,False,False,False
 70,,Spielberg,YELLOW,False,False,False,False,True,False,False,False
+1,,Yas Marina Circuit,DOUBLE YELLOW,False,False,False,False,True,True,False,False
 1,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False
 1,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False
 1,,Zandvoort,DOUBLE YELLOW,False,False,False,False,True,True,False,False
