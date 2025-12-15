@@ -1,171 +1,512 @@
-lap_number,driver_number,grand_prix,flag_upper,sc_deploy,sc_end,vsc_deploy,vsc_end,is_yellow,is_double_yellow,is_red,lap_clean
-1,,Austin,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Austin,YELLOW,False,False,False,False,True,False,False,False
-56,,Austin,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Baku,YELLOW,False,False,False,False,True,False,False,False
-1,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Baku,YELLOW,False,False,False,False,True,False,False,False
-1,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-10,,Baku,YELLOW,False,False,False,False,True,False,False,False
-10,,Baku,YELLOW,False,False,False,False,True,False,False,False
-10,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-10,,Baku,YELLOW,False,False,False,False,True,False,False,False
-17,,Baku,YELLOW,False,False,False,False,True,False,False,False
-49,,Baku,YELLOW,False,False,False,False,True,False,False,False
-51,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Hungaroring,YELLOW,False,False,False,False,True,False,False,False
-69,,Hungaroring,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-70,,Hungaroring,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Interlagos,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Interlagos,YELLOW,False,False,False,False,True,False,False,False
-1,,Interlagos,YELLOW,False,False,False,False,True,False,False,False
-1,,Interlagos,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-2,,Interlagos,RED,False,False,False,False,False,False,True,False
-17,,Jeddah,YELLOW,False,False,False,False,True,False,False,False
-17,,Jeddah,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-18,,Jeddah,YELLOW,False,False,False,False,True,False,False,False
-18,,Jeddah,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-18,,Jeddah,YELLOW,False,False,False,False,True,False,False,False
-1,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
-1,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
-3,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-14,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
-20,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
-27,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-40,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
-47,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
-48,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
-50,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
-50,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False
-1,,Lusail,YELLOW,False,False,False,False,True,False,False,False
-33,,Lusail,YELLOW,False,False,False,False,True,False,False,False
-41,,Lusail,YELLOW,False,False,False,False,True,False,False,False
-1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
-1,,Melbourne,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
-1,,Melbourne,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
-1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
-1,,Melbourne,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-7,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
-8,,Melbourne,RED,False,False,False,False,False,False,True,False
-53,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
-55,,Melbourne,RED,False,False,False,False,False,False,True,False
-57,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
-57,,Melbourne,YELLOW,False,False,False,False,True,False,False,False
-57,,Melbourne,RED,False,False,False,False,False,False,True,False
-58,,Melbourne,RED,False,False,False,False,False,False,True,False
-58,,Melbourne,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-8,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-33,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-33,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-34,,Mexico City,RED,False,False,False,False,False,False,True,False
-49,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-49,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-67,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-67,,Mexico City,YELLOW,False,False,False,False,True,False,False,False
-1,,Miami,YELLOW,False,False,False,False,True,False,False,False
-1,,Miami,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-1,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-1,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-12,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-14,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-55,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-55,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-55,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-55,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-56,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-56,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-56,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-56,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-58,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-59,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-59,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-60,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-60,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-61,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-61,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-69,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-69,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-69,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False
-1,,Montreal,YELLOW,False,False,False,False,True,False,False,False
-1,,Montreal,YELLOW,False,False,False,False,True,False,False,False
-7,,Montreal,YELLOW,False,False,False,False,True,False,False,False
-12,,Montreal,YELLOW,False,False,False,False,True,False,False,False
-14,,Montreal,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-29,,Montreal,YELLOW,False,False,False,False,True,False,False,False
-35,,Montreal,YELLOW,False,False,False,False,True,False,False,False
-36,,Montreal,YELLOW,False,False,False,False,True,False,False,False
-36,,Montreal,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Monza,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Monza,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Sakhir,YELLOW,False,False,False,False,True,False,False,False
-1,,Sakhir,YELLOW,False,False,False,False,True,False,False,False
-2,,Sakhir,YELLOW,False,False,False,False,True,False,False,False
-41,,Sakhir,YELLOW,False,False,False,False,True,False,False,False
-33,,Silverstone,YELLOW,False,False,False,False,True,False,False,False
-33,,Silverstone,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-33,,Silverstone,YELLOW,False,False,False,False,True,False,False,False
-1,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-2,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-19,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-19,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-43,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-43,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-47,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-47,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-53,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-59,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-59,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-59,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-62,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-62,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-62,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-62,,Singapore,YELLOW,False,False,False,False,True,False,False,False
-1,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Spa-Francorchamps,YELLOW,False,False,False,False,True,False,False,False
-2,,Spa-Francorchamps,YELLOW,False,False,False,False,True,False,False,False
-2,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-2,,Spa-Francorchamps,YELLOW,False,False,False,False,True,False,False,False
-3,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-44,,Spa-Francorchamps,YELLOW,False,False,False,False,True,False,False,False
-44,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Spielberg,YELLOW,False,False,False,False,True,False,False,False
-13,,Spielberg,YELLOW,False,False,False,False,True,False,False,False
-14,,Spielberg,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-14,,Spielberg,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-14,,Spielberg,YELLOW,False,False,False,False,True,False,False,False
-1,,Suzuka,YELLOW,False,False,False,False,True,False,False,False
-2,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-12,,Suzuka,YELLOW,False,False,False,False,True,False,False,False
-12,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-12,,Suzuka,YELLOW,False,False,False,False,True,False,False,False
-12,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-14,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-53,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Yas Marina Circuit,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-1,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False
-1,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False
-16,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False
-16,,Zandvoort,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-16,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False
-63,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False
-63,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False
-63,,Zandvoort,DOUBLE YELLOW,False,False,False,False,True,True,False,False
-64,,Zandvoort,RED,False,False,False,False,False,False,True,False
+lap_number,driver_number,grand_prix,flag_upper,sc_deploy,sc_end,vsc_deploy,vsc_end,is_yellow,is_double_yellow,is_red,is_blue,lap_clean
+49,3.0,Austin,BLUE,False,False,False,False,False,False,False,True,False
+53,3.0,Austin,BLUE,False,False,False,False,False,False,False,True,False
+55,20.0,Austin,BLUE,False,False,False,False,False,False,False,True,False
+56,24.0,Austin,BLUE,False,False,False,False,False,False,False,True,False
+56,24.0,Austin,BLUE,False,False,False,False,False,False,False,True,False
+1,,Austin,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Austin,YELLOW,False,False,False,False,True,False,False,False,False
+56,,Austin,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+42,77.0,Baku,BLUE,False,False,False,False,False,False,False,True,False
+43,77.0,Baku,BLUE,False,False,False,False,False,False,False,True,False
+1,,Baku,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Baku,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+10,,Baku,YELLOW,False,False,False,False,True,False,False,False,False
+10,,Baku,YELLOW,False,False,False,False,True,False,False,False,False
+10,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+10,,Baku,YELLOW,False,False,False,False,True,False,False,False,False
+17,,Baku,YELLOW,False,False,False,False,True,False,False,False,False
+49,,Baku,YELLOW,False,False,False,False,True,False,False,False,False
+51,,Baku,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+56,2.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+59,2.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+60,2.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+64,2.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+38,4.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+56,4.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+59,4.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+60,4.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+41,10.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+41,20.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+60,20.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+65,20.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+66,20.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+62,21.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+62,23.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+56,27.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+40,77.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+45,77.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+54,77.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+57,77.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+59,77.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+65,77.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+49,81.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+64,81.0,Catalunya,BLUE,False,False,False,False,False,False,False,True,False
+52,2.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+62,2.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+63,2.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+66,2.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+69,2.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+69,2.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+70,2.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+70,2.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+70,2.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+35,3.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+36,3.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+56,3.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+57,3.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+70,3.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+65,18.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+39,20.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+48,20.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+52,20.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+58,20.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+59,20.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+62,20.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+65,20.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+67,20.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+70,20.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+44,22.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+58,22.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+59,22.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+59,22.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+61,22.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+65,22.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+40,23.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+59,23.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+40,24.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+54,24.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+56,24.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+61,24.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+53,27.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+63,27.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+65,27.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+66,27.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+70,27.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+58,77.0,Hungaroring,BLUE,False,False,False,False,False,False,False,True,False
+1,,Hungaroring,YELLOW,False,False,False,False,True,False,False,False,False
+69,,Hungaroring,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+70,,Hungaroring,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+59,2.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+65,2.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+15,3.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+18,3.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+27,3.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+28,3.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+35,3.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+37,3.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+57,3.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+58,3.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+66,31.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+70,31.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+58,63.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+16,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+26,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+36,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+38,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+54,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+54,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+54,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+57,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+58,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+63,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+65,81.0,Interlagos,BLUE,False,False,False,False,False,False,False,True,False
+1,,Interlagos,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Interlagos,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Interlagos,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Interlagos,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+2,,Interlagos,RED,False,False,False,False,False,False,True,False,False
+40,77.0,Jeddah,BLUE,False,False,False,False,False,False,False,True,False
+42,77.0,Jeddah,BLUE,False,False,False,False,False,False,False,True,False
+48,77.0,Jeddah,BLUE,False,False,False,False,False,False,False,True,False
+49,77.0,Jeddah,BLUE,False,False,False,False,False,False,False,True,False
+17,,Jeddah,YELLOW,False,False,False,False,True,False,False,False,False
+17,,Jeddah,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+18,,Jeddah,YELLOW,False,False,False,False,True,False,False,False,False
+18,,Jeddah,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+18,,Jeddah,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False,False
+3,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+14,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False,False
+20,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False,False
+27,,Las Vegas,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+40,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False,False
+47,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False,False
+48,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False,False
+50,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False,False
+50,,Las Vegas,YELLOW,False,False,False,False,True,False,False,False,False
+41,2.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+48,10.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+48,10.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+46,11.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+50,18.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+43,20.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+57,20.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+55,22.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+57,22.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+41,27.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+41,27.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+48,27.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+52,27.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+53,27.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+41,40.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+42,40.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+46,40.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+50,40.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+50,40.0,Lusail,BLUE,False,False,False,False,False,False,False,True,False
+1,,Lusail,YELLOW,False,False,False,False,True,False,False,False,False
+33,,Lusail,YELLOW,False,False,False,False,True,False,False,False,False
+41,,Lusail,YELLOW,False,False,False,False,True,False,False,False,False
+39,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+48,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+48,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+49,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+50,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+51,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+51,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+52,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+52,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+56,2.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+43,21.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+54,77.0,Melbourne,BLUE,False,False,False,False,False,False,False,True,False
+1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Melbourne,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Melbourne,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Melbourne,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Melbourne,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+7,,Melbourne,YELLOW,False,False,False,False,True,False,False,False,False
+8,,Melbourne,RED,False,False,False,False,False,False,True,False,False
+53,,Melbourne,YELLOW,False,False,False,False,True,False,False,False,False
+55,,Melbourne,RED,False,False,False,False,False,False,True,False,False
+57,,Melbourne,YELLOW,False,False,False,False,True,False,False,False,False
+57,,Melbourne,YELLOW,False,False,False,False,True,False,False,False,False
+57,,Melbourne,RED,False,False,False,False,False,False,True,False,False
+58,,Melbourne,RED,False,False,False,False,False,False,True,False,False
+58,,Melbourne,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+8,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+33,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+33,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+34,,Mexico City,RED,False,False,False,False,False,False,True,False,False
+49,,Mexico City,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+49,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+67,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+67,,Mexico City,YELLOW,False,False,False,False,True,False,False,False,False
+33,2.0,Miami,BLUE,False,False,False,False,False,False,False,True,False
+42,2.0,Miami,BLUE,False,False,False,False,False,False,False,True,False
+54,2.0,Miami,BLUE,False,False,False,False,False,False,False,True,False
+57,2.0,Miami,BLUE,False,False,False,False,False,False,False,True,False
+40,81.0,Miami,BLUE,False,False,False,False,False,False,False,True,False
+49,81.0,Miami,BLUE,False,False,False,False,False,False,False,True,False
+49,81.0,Miami,BLUE,False,False,False,False,False,False,False,True,False
+1,,Miami,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Miami,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+39,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+41,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+41,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+45,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+51,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+55,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+64,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+65,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+67,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+69,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+69,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+72,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+74,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+74,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+74,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+78,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+78,2.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+31,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+35,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+35,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+51,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+52,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+52,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+52,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+53,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+73,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+77,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+77,11.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+31,18.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+36,18.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+32,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+37,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+54,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+56,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+56,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+57,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+57,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+57,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+59,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+68,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+70,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+71,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+71,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+71,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+72,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+73,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+73,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+73,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+74,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+74,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+75,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+75,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+75,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+75,20.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+35,21.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+40,21.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+55,21.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+58,21.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+68,21.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+69,21.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+69,21.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+65,22.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+70,22.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+70,22.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+70,22.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+78,22.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+78,22.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+20,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+34,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+50,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+52,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+53,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+53,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+53,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+53,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+57,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+57,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+57,23.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+28,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+29,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+34,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+51,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+53,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+53,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+54,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+55,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+59,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+65,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+66,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+66,24.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+30,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+34,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+52,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+54,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+55,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+55,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+72,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+72,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+74,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+76,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+76,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+77,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+77,27.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+34,77.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+35,77.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+39,77.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+55,77.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+55,77.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+73,77.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+49,81.0,Monte Carlo,BLUE,False,False,False,False,False,False,False,True,False
+1,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+12,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+14,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+55,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+55,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+55,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+55,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+56,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+56,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+56,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+56,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+58,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+59,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+59,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+60,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+60,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+61,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+61,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+69,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+69,,Monte Carlo,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+69,,Monte Carlo,YELLOW,False,False,False,False,True,False,False,False,False
+36,20.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+40,20.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+42,20.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+44,20.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+55,20.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+59,20.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+42,21.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+43,21.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+44,21.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+62,24.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+66,24.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+67,24.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+68,24.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+62,27.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+67,27.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+68,27.0,Montreal,BLUE,False,False,False,False,False,False,False,True,False
+1,,Montreal,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Montreal,YELLOW,False,False,False,False,True,False,False,False,False
+7,,Montreal,YELLOW,False,False,False,False,True,False,False,False,False
+12,,Montreal,YELLOW,False,False,False,False,True,False,False,False,False
+14,,Montreal,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+29,,Montreal,YELLOW,False,False,False,False,True,False,False,False,False
+35,,Montreal,YELLOW,False,False,False,False,True,False,False,False,False
+36,,Montreal,YELLOW,False,False,False,False,True,False,False,False,False
+36,,Montreal,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+40,20.0,Monza,BLUE,False,False,False,False,False,False,False,True,False
+40,20.0,Monza,BLUE,False,False,False,False,False,False,False,True,False
+40,31.0,Monza,BLUE,False,False,False,False,False,False,False,True,False
+1,,Monza,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Monza,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+57,2.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+37,4.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+39,4.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+49,4.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+55,20.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+48,21.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+53,21.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+51,24.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+51,24.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+42,27.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+30,31.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+43,31.0,Sakhir,BLUE,False,False,False,False,False,False,False,True,False
+1,,Sakhir,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Sakhir,YELLOW,False,False,False,False,True,False,False,False,False
+2,,Sakhir,YELLOW,False,False,False,False,True,False,False,False,False
+41,,Sakhir,YELLOW,False,False,False,False,True,False,False,False,False
+33,,Silverstone,YELLOW,False,False,False,False,True,False,False,False,False
+33,,Silverstone,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+33,,Silverstone,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+2,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+19,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+19,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+43,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+43,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+47,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+47,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+53,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+59,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+59,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+59,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+62,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+62,,Singapore,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+62,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+62,,Singapore,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+1,,Spa-Francorchamps,YELLOW,False,False,False,False,True,False,False,False,False
+2,,Spa-Francorchamps,YELLOW,False,False,False,False,True,False,False,False,False
+2,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+2,,Spa-Francorchamps,YELLOW,False,False,False,False,True,False,False,False,False
+3,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+44,,Spa-Francorchamps,YELLOW,False,False,False,False,True,False,False,False,False
+44,,Spa-Francorchamps,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+50,2.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+62,2.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+71,2.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+65,10.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+48,20.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+53,20.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+58,20.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+59,20.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+64,20.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+67,20.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+70,20.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+57,21.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+65,21.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+66,21.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+67,21.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+71,21.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+38,22.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+44,22.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+55,22.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+55,22.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+62,22.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+65,22.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+58,23.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+71,23.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+59,24.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+67,24.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+69,24.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+51,31.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+65,31.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+37,77.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+41,77.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+44,77.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+49,77.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+56,77.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+64,77.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+66,77.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+36,81.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+36,81.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+43,81.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+53,81.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+53,81.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+54,81.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+62,81.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+65,81.0,Spielberg,BLUE,False,False,False,False,False,False,False,True,False
+1,,Spielberg,YELLOW,False,False,False,False,True,False,False,False,False
+13,,Spielberg,YELLOW,False,False,False,False,True,False,False,False,False
+14,,Spielberg,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+14,,Spielberg,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+14,,Spielberg,YELLOW,False,False,False,False,True,False,False,False,False
+52,22.0,Suzuka,BLUE,False,False,False,False,False,False,False,True,False
+50,24.0,Suzuka,BLUE,False,False,False,False,False,False,False,True,False
+46,27.0,Suzuka,BLUE,False,False,False,False,False,False,False,True,False
+52,40.0,Suzuka,BLUE,False,False,False,False,False,False,False,True,False
+1,,Suzuka,YELLOW,False,False,False,False,True,False,False,False,False
+2,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+12,,Suzuka,YELLOW,False,False,False,False,True,False,False,False,False
+12,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+12,,Suzuka,YELLOW,False,False,False,False,True,False,False,False,False
+12,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+14,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+53,,Suzuka,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+53,20.0,Yas Marina Circuit,BLUE,False,False,False,False,False,False,False,True,False
+58,24.0,Yas Marina Circuit,BLUE,False,False,False,False,False,False,False,True,False
+54,77.0,Yas Marina Circuit,BLUE,False,False,False,False,False,False,False,True,False
+1,,Yas Marina Circuit,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+7,2.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+8,2.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+8,2.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+9,2.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+10,2.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+60,40.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+60,40.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+62,40.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+62,40.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+62,77.0,Zandvoort,BLUE,False,False,False,False,False,False,False,True,False
+1,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False,False
+1,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False,False
+16,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False,False
+16,,Zandvoort,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+16,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False,False
+63,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False,False
+63,,Zandvoort,YELLOW,False,False,False,False,True,False,False,False,False
+63,,Zandvoort,DOUBLE YELLOW,False,False,False,False,True,True,False,False,False
+64,,Zandvoort,RED,False,False,False,False,False,False,True,False,False

@@ -2237,8 +2237,8 @@ def process_race_control_data(df_input):
     rc["msg_upper"] = rc["message"].str.upper().fillna("")
     rc["flag_upper"] = rc["flag"].astype(str).str.upper().fillna("")
 
-    # Remove rows with specific flags (BLUE, CHEQUERED, BLACK AND WHITE, NONE, NAN, empty, Green, CLEAR)
-    rc = rc[~rc["flag_upper"].isin(["BLUE", "CHEQUERED", "BLACK AND WHITE", "NONE", "NAN", "", "CLEAR", "GREEN"])].copy()
+    # Remove rows with specific flags (CHEQUERED, BLACK AND WHITE, NONE, NAN, empty, Green, CLEAR)                         #if you want to take out blue add it here
+    rc = rc[~rc["flag_upper"].isin(["CHEQUERED", "BLACK AND WHITE", "NONE", "NAN", "", "CLEAR", "GREEN"])].copy()
     
     # Safety car events
     rc["sc_deploy"] = rc["msg_upper"].str.contains("SAFETY CAR DEPLOYED", case=False, na=False)
@@ -2276,27 +2276,27 @@ def process_race_control_data(df_input):
     rc["is_double_yellow"] = rc["is_double_yellow"].fillna(False).astype(bool)
     rc["is_red"] = rc["is_red"].fillna(False).astype(bool)
     
-    # # Blue flags (Driver specific)
-    # drv_mask = rc["scope"] == "Driver" if "scope" in rc.columns else pd.Series([False] * len(rc))
-    # drv_rc = rc[drv_mask].copy()
+    # Blue flags (Driver specific)
+    drv_mask = rc["scope"] == "Driver" if "scope" in rc.columns else pd.Series([False] * len(rc))
+    drv_rc = rc[drv_mask].copy()
     
-    # if len(drv_rc) > 0:
-    #     drv_rc["is_blue"] = (
-    #         (drv_rc["flag_upper"] == "BLUE") |
-    #         drv_rc["msg_upper"].str.contains("BLUE FLAG", case=False, na=False)
-    #     )
-    #     rc.loc[drv_rc.index, "is_blue"] = drv_rc["is_blue"]
-    # else:
-    #     rc["is_blue"] = False
+    if len(drv_rc) > 0:
+        drv_rc["is_blue"] = (
+            (drv_rc["flag_upper"] == "BLUE") |
+            drv_rc["msg_upper"].str.contains("BLUE FLAG", case=False, na=False)
+        )
+        rc.loc[drv_rc.index, "is_blue"] = drv_rc["is_blue"]
+    else:
+        rc["is_blue"] = False
     
-    # rc["is_blue"] = rc["is_blue"].fillna(False).astype(bool)
+    rc["is_blue"] = rc["is_blue"].fillna(False).astype(bool)
     
     # Clean lap classification
     #lap_clean = False when is_yellow OR vsc_deploy OR sc_deploy OR is_red is True, True otherwise
     rc["lap_clean"] = ~((rc["is_yellow"]) | (rc["vsc_deploy"]) | (rc["sc_deploy"]) | (rc["is_red"]))
   
     
-    laps_with_flags = rc[(rc["is_yellow"]) | (rc["is_red"])].groupby(["driver_number", "lap_number"])["lap_number"].count().index   #(rc["is_blue"]) removed , in case uncomment and add it 
+    laps_with_flags = rc[(rc["is_yellow"]) | (rc["is_red"]) | (rc["is_blue"])].groupby(["driver_number", "lap_number"])["lap_number"].count().index   #(rc["is_blue"]) removed , in case uncomment and add it 
     for driver, lap in laps_with_flags:
         rc.loc[(rc["driver_number"] == driver) & (rc["lap_number"] == lap), "lap_clean"] = False
     
@@ -2306,7 +2306,7 @@ def process_race_control_data(df_input):
         'flag_upper',  # normalized
         'sc_deploy', 'sc_end', 'vsc_deploy', 'vsc_end',  # SC/VSC events
         'is_yellow', 'is_double_yellow', 'is_red',  # track flags
-        #'is_blue',  # driver flags
+        'is_blue',  # driver flags
         'lap_clean'  # clean lap classification
     ]
     
@@ -2479,98 +2479,6 @@ def merge_violations_with_timing(
             continue
     
 
-
-def merge_race_flags_to_violations(
-    violations_dir: str = "csv_output",
-    race_control_dir: str = "csv_output",
-    output_dir: str = "csv_output",
-    years: list = [2023, 2024, 2025]
-):
-    """
-    Add race control flags to violations-merged lap timing data.
-    
-    For each (grand_prix, lap_number), merges race control flags to all drivers at that lap.
-    Example: Yellow flag on lap 20 in Austin applies to all drivers on lap 20 in Austin.
-    
-    Input: {year}_Merged_Lap_Timing_With_Violations.xlsx (timing + violations data)
-           race_control_{year}_processed.csv (processed flags)
-    
-    Output: {year}_Merged_Lap_Timing_Violations_RaceControl.xlsx
-    
-    Parameters:
-    -----------
-    violations_dir : str
-        Directory containing {year}_Merged_Lap_Timing_With_Violations.xlsx files
-    race_control_dir : str
-        Directory containing race_control_{year}_processed.csv files
-    output_dir : str
-        Output directory for merged CSV files
-    years : list
-        Years to process
-    """
-    yearly_data = {}
-    
-    for year in years:
-        violations_file = f"{violations_dir}/{year}_Merged_Lap_Timing_With_Violations.xlsx"
-        rc_file = f"{race_control_dir}/race_control_{year}_processed.csv"
-        output_file = f"{output_dir}/{year}_Merged_Lap_Timing_Violations_RaceControl.xlsx"
-        
-        try:
-            # Load data
-            df_timing = pd.read_excel(violations_file)
-            df_rc = pd.read_csv(rc_file)
-            
-            # Standardize column names
-            if 'race_name' in df_timing.columns and 'grand_prix' not in df_timing.columns:
-                df_timing = df_timing.rename(columns={'race_name': 'grand_prix'})
-            elif 'name' in df_timing.columns and 'grand_prix' not in df_timing.columns:
-                df_timing = df_timing.rename(columns={'name': 'grand_prix'})
-            
-            if 'NumberOfLaps' in df_timing.columns:
-                df_timing = df_timing.rename(columns={'NumberOfLaps': 'lap_number'})
-            
-            # Extract race-level flags (one row per grand_prix, lap_number)
-            rc_race_level = df_rc[[
-                'grand_prix', 'lap_number', 'flag_upper',
-                'sc_deploy', 'sc_end', 'vsc_deploy', 'vsc_end',
-                'is_yellow', 'is_double_yellow', 'is_red', 'lap_clean'
-            ]].copy()
-            
-            rc_race_level = rc_race_level.groupby(['grand_prix', 'lap_number']).first().reset_index()
-            
-            # Merge: same flags apply to all drivers in same lap/grand_prix
-            df_merged = df_timing.merge(
-                rc_race_level,
-                on=['grand_prix', 'lap_number'],
-                how='left'
-            )
-            
-            # Fill missing flags with False
-            flag_columns = [
-                'sc_deploy', 'sc_end', 'vsc_deploy', 'vsc_end',
-                'is_yellow', 'is_double_yellow', 'is_red', 'lap_clean'
-            ]
-            for col in flag_columns:
-                if col in df_merged.columns:
-                    df_merged[col] = df_merged[col].fillna(False).astype(bool)
-            
-            # Save output
-            df_merged.to_excel(output_file, index=False)
-            yearly_data[year] = df_merged
-            
-            # Clean up
-            del df_timing, df_rc, rc_race_level, df_merged
-            gc.collect()
-            
-        except FileNotFoundError as e:
-            print(f"Skipping {year}: File not found ({e})")
-            continue
-        except Exception as e:
-            print(f"Error processing {year}: {e}")
-            continue
-    
-    return yearly_data if yearly_data else None
-
 # Mergin the violation with the race contol dataset
 
 def map_race_control_to_race_name(grand_prix):
@@ -2621,7 +2529,6 @@ def merge_race_flags_to_violations(
     
     Output: {year}_Merged_Lap_Timing_Violations_RaceControl.xlsx
     
-
     """
     yearly_data = {}
     
@@ -2639,10 +2546,14 @@ def merge_race_flags_to_violations(
             if 'NumberOfLaps' in df_timing.columns:
                 df_timing = df_timing.rename(columns={'NumberOfLaps': 'lap_number'})
             
+            # Rename driver number column if needed
+            if 'RacingNumber' in df_timing.columns and 'driver_number' not in df_timing.columns:
+                df_timing = df_timing.rename(columns={'RacingNumber': 'driver_number'})
+            
             # Map race_control grand_prix to race_name format
             df_rc['race_name'] = df_rc['grand_prix'].apply(map_race_control_to_race_name)
             
-            # Extract race-level flags (one row per race_name, lap_number)
+            # Extract race-level flags (apply to ALL drivers on that lap)
             rc_race_level = df_rc[[
                 'race_name', 'lap_number', 'flag_upper',
                 'sc_deploy', 'sc_end', 'vsc_deploy', 'vsc_end',
@@ -2654,17 +2565,37 @@ def merge_race_flags_to_violations(
             
             rc_race_level = rc_race_level.groupby(['race_name', 'lap_number']).first().reset_index()
             
-            # Merge: same flags apply to all drivers in same lap/race
+            # Extract driver-level flags (apply to SPECIFIC driver on that lap)
+            rc_driver_level = df_rc[[
+                'race_name', 'lap_number', 'driver_number', 'is_blue'
+            ]].copy()
+            
+            # Remove rows with None race_name (unmapped grand_prix)
+            rc_driver_level = rc_driver_level[rc_driver_level['race_name'].notna()]
+            
+            # For blue flags: group by driver + lap, take any True value
+            rc_driver_level = rc_driver_level.groupby(
+                ['race_name', 'lap_number', 'driver_number']
+            )['is_blue'].any().reset_index()
+            
+            # Merge race-level flags: same flags apply to all drivers in same lap/race
             df_merged = df_timing.merge(
                 rc_race_level,
                 on=['race_name', 'lap_number'],
                 how='left'
             )
             
+            # Merge driver-level flags: specific to each driver
+            df_merged = df_merged.merge(
+                rc_driver_level,
+                on=['race_name', 'lap_number', 'driver_number'],
+                how='left'
+            )
+            
             # Fill missing flags with False (except lap_clean = True for clean laps)
             flag_columns = [
                 'sc_deploy', 'sc_end', 'vsc_deploy', 'vsc_end',
-                'is_yellow', 'is_double_yellow', 'is_red', 'lap_clean'
+                'is_yellow', 'is_double_yellow', 'is_red', 'is_blue', 'lap_clean'
             ]
             for col in flag_columns:
                 if col in df_merged.columns:
@@ -2676,6 +2607,15 @@ def merge_race_flags_to_violations(
                         df_merged[col] = df_merged[col].fillna(False)
                     # Convert to bool efficiently
                     df_merged[col] = df_merged[col].astype('bool')
+            
+            # Rename driver_number back to RacingNumber for consistency with downstream functions
+            # Only rename if we had renamed it earlier (i.e., if RacingNumber doesn't exist)
+            if 'driver_number' in df_merged.columns:
+                if 'RacingNumber' not in df_merged.columns:
+                    df_merged = df_merged.rename(columns={'driver_number': 'RacingNumber'})
+                else:
+                    # If both exist, drop driver_number (keep RacingNumber)
+                    df_merged = df_merged.drop(columns=['driver_number'])
             
             # Save output
             df_merged.to_excel(output_file, index=False)
