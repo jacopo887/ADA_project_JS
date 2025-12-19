@@ -1,0 +1,15 @@
+{
+  "MLP": {
+    "hidden_layer_sizes": [
+      32,
+      16
+    ],
+    "activation": "relu",
+    "alpha": 0.001,
+    "early_stopping": true,
+    "n_iter_no_change": 20
+  },
+  "Test_score": 4.7457784798379805,
+  "Iterations": 478,
+  "Purpose": "Diagnostic - detect smooth non-linear interactions"
+}

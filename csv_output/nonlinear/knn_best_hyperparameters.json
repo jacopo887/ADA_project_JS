@@ -1,0 +1,9 @@
+{
+  "kNN": {
+    "model__n_neighbors": 25,
+    "model__p": 2,
+    "model__weights": "distance"
+  },
+  "CV_score": 8.962476700397827,
+  "Test_score": 6.754702414140963
+}

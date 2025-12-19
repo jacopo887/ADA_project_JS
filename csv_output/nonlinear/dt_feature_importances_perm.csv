@@ -1,0 +1,16 @@
+Feature,Importance
+Pressure,1.264076534102557
+wind_sin,0.48379577568320586
+AirTemp,0.4602835581577116
+Humidity,0.45097233257768643
+wind_cos,0.24508248740370586
+TrackTemp,0.22781748888095654
+laptime_cumulative_trend,0.01687422532808469
+LapInStint,0.0
+laptime_rolling_std_3,0.0
+laptime_change_prev,0.0
+WindSpeed,0.0
+is_leader,0.0
+in_drs_range,0.0
+in_clean_air,0.0
+in_dirty_air,0.0
