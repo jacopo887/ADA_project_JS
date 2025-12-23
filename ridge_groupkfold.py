@@ -77,16 +77,17 @@ def make_Xy(df, features, categorical, target, fit_cols=None, medians=None):
         
         # Align columns for validation/test sets
         if fit_cols is not None:
-            # Filter to only columns that exist in training
-            cat_cols = [c for c in fit_cols if c in X_cat.columns]
-            missing_cols = [c for c in fit_cols if c not in X_cat.columns and c not in features]
+            # Identify categorical columns from training set (not in numerical features)
+            train_cat_cols = [c for c in fit_cols if c not in available_features]
             
-            # Add missing columns with zeros
-            for col in missing_cols:
-                X_cat[col] = 0.0
+            # Add missing categorical columns with zeros
+            for col in train_cat_cols:
+                if col not in X_cat.columns:
+                    X_cat[col] = 0.0
             
-            # Reorder to match training
-            X_cat = X_cat[cat_cols]
+            # Select only the categorical columns that were in training
+            # (in case validation/test has new categories)
+            X_cat = X_cat[[c for c in train_cat_cols if c in X_cat.columns]]
         
         # Combine numerical and categorical
         X = pd.concat([X_num, X_cat], axis=1)
@@ -96,7 +97,7 @@ def make_Xy(df, features, categorical, target, fit_cols=None, medians=None):
     # Store column names
     cols = X.columns.tolist() if fit_cols is None else fit_cols
     
-    # Ensure column alignment
+    # Ensure column alignment for validation/test
     if fit_cols is not None:
         # Add missing columns with zeros
         for col in fit_cols:
