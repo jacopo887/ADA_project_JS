@@ -154,11 +154,15 @@ def cv_ridge_groupkfold(df, features, categorical, target, group_col='name',
     # Store results
     results = []
     
+    # Validate inputs
+    if not alphas:
+        raise ValueError("alphas list cannot be empty")
+    
     print(f"\nRunning {n_splits}-fold cross-validation with GroupKFold (grouped by '{group_col}')...")
     print(f"Testing {len(alphas)} alpha values: {alphas}\n")
     
-    # Track best alpha
-    best_alpha = None
+    # Track best alpha (initialize with first alpha)
+    best_alpha = alphas[0]
     best_score = float('inf')
     
     # For each alpha value
