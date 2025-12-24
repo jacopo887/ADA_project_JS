@@ -1,0 +1,20 @@
+{
+  "model": "DecisionTree",
+  "feature_set": "Tyre+Weather+State",
+  "n_features": 21,
+  "best_params": {
+    "model__ccp_alpha": 0.0005,
+    "model__max_depth": 6,
+    "model__max_features": 0.5,
+    "model__max_leaf_nodes": null,
+    "model__min_samples_leaf": 20,
+    "model__min_samples_split": 2
+  },
+  "cv_mae_median_per_circuit": 0.3723492831738091,
+  "test_mae": 0.34512408656615695,
+  "test_rmse": 0.5165373946601568,
+  "test_r2": 0.2516965355387384,
+  "test_median_mae_per_race": 0.31796948474661196,
+  "tree_depth": 6,
+  "tree_leaves": 27
+}

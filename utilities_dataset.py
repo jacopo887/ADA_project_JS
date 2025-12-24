@@ -3241,6 +3241,12 @@ def merge_stints_to_clean_dataset(df_clean, df_stints=None):
     df['Stint'] = pd.to_numeric(df['Stint'], errors='coerce').astype('Int64')
     df['TyreAgeAtStart'] = pd.to_numeric(df['TyreAgeAtStart'], errors='coerce').astype('Int64')
     df['LapInStint'] = pd.to_numeric(df['LapInStint'], errors='coerce').astype('Int64')
+
+    # Calculate TyreLife: TyreAgeAtStart + LapInStint - 1
+    # This gives continuous tyre age across the stint
+    # e.g., if TyreAgeAtStart=3 and LapInStint=[1,2,3,4,5], TyreLife=[3,4,5,6,7]
+    df['TyreLife'] = df['TyreAgeAtStart'] + df['LapInStint'] - 1
+    df['TyreLife'] = df['TyreLife'].astype('Int64')
     
     # Summary statistics
     total_laps = len(df)

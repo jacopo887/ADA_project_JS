@@ -1,0 +1,3 @@
+block,n_features,CV_MAE_per_circuit,test_MAE,test_RMSE,test_R2,test_median_MAE_per_race,n_estimators,best_params
+Tyre+Weather+State,21,0.35182670831470775,0.3348488986551276,0.4859136524253802,0.3377950493445686,0.301198399379535,600,"{""model__max_depth"": 12, ""model__max_features"": 0.7, ""model__min_samples_leaf"": 20, ""model__min_samples_split"": 2, ""model__n_estimators"": 600}"
+Tyre+Weather+State+Geometry,32,0.34736272790340705,0.33340332636473985,0.48421425445134597,0.34241884161305525,0.30104924282600665,600,"{""model__max_depth"": 16, ""model__max_features"": 0.7, ""model__min_samples_leaf"": 20, ""model__min_samples_split"": 2, ""model__n_estimators"": 600}"
