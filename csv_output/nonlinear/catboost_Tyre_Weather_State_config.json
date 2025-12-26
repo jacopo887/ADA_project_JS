@@ -1,0 +1,17 @@
+{
+  "model": "CatBoost",
+  "feature_set": "Tyre+Weather+State",
+  "n_features": 21,
+  "best_params": {
+    "depth": 4,
+    "l2_leaf_reg": 1,
+    "learning_rate": 0.1,
+    "random_strength": 0.5
+  },
+  "cv_mae_median_per_circuit": 0.35267102418229,
+  "test_mae": 1.0258907482782726,
+  "test_rmse": 1.6625243633572,
+  "test_r2": -6.751937405311554,
+  "test_median_mae_per_circuit": 0.3771769550842012,
+  "n_trees": 2998
+}
