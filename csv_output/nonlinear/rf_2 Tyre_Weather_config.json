@@ -1,0 +1,18 @@
+{
+  "model": "RandomForest",
+  "feature_set": "2) Tyre+Weather",
+  "n_features": 12,
+  "best_params": {
+    "model__max_depth": null,
+    "model__max_features": "sqrt",
+    "model__min_samples_leaf": 10,
+    "model__min_samples_split": 2,
+    "model__n_estimators": 100
+  },
+  "test_MAE": 0.4657457926545821,
+  "test_RMSE": 0.6612554666618121,
+  "median_MAE_per_circuit": 0.48936704349209514,
+  "IQR_MAE_per_circuit": 0.035337375680863314,
+  "CV_MAE": 0.4574017040129023,
+  "n_estimators": 100
+}

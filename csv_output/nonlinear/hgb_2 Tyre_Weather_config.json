@@ -1,0 +1,18 @@
+{
+  "model": "HistGradientBoosting",
+  "feature_set": "2) Tyre+Weather",
+  "n_features": 12,
+  "best_params": {
+    "model__l2_regularization": 0.1,
+    "model__learning_rate": 0.01,
+    "model__max_depth": 3,
+    "model__max_iter": 300,
+    "model__min_samples_leaf": 20
+  },
+  "test_MAE": 0.46234893274908473,
+  "test_RMSE": 0.6703819250180728,
+  "median_MAE_per_circuit": 0.4834372788926182,
+  "IQR_MAE_per_circuit": 0.013660108994361042,
+  "CV_MAE": 0.4502644954558587,
+  "n_iter": 300
+}

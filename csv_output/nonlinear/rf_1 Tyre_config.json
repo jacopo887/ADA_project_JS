@@ -1,0 +1,18 @@
+{
+  "model": "RandomForest",
+  "feature_set": "1) Tyre",
+  "n_features": 6,
+  "best_params": {
+    "model__max_depth": 8,
+    "model__max_features": "sqrt",
+    "model__min_samples_leaf": 20,
+    "model__min_samples_split": 2,
+    "model__n_estimators": 100
+  },
+  "test_MAE": 0.4659685401061534,
+  "test_RMSE": 0.6534924831982409,
+  "median_MAE_per_circuit": 0.47644608019895845,
+  "IQR_MAE_per_circuit": 0.07917072244139217,
+  "CV_MAE": 0.4458860425771163,
+  "n_estimators": 100
+}

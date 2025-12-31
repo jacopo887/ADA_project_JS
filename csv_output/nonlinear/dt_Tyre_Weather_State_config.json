@@ -10,11 +10,11 @@
     "model__min_samples_leaf": 20,
     "model__min_samples_split": 2
   },
-  "cv_mae_median_per_circuit": 0.3723492831738091,
-  "test_mae": 0.34512408656615695,
-  "test_rmse": 0.5165373946601568,
-  "test_r2": 0.2516965355387384,
-  "test_median_mae_per_race": 0.31796948474661196,
+  "test_MAE": 0.34512408656615695,
+  "test_RMSE": 0.5165373946601568,
+  "median_MAE_per_circuit": 0.33894136129072644,
+  "IQR_MAE_per_circuit": 0.054982157667902765,
+  "CV_MAE": 0.3723492831738091,
   "tree_depth": 6,
   "tree_leaves": 27
 }
