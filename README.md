@@ -16,6 +16,8 @@ Two complementary modeling settings are explored:
 
 The latter represents the more realistic and challenging prediction task.
 
+
+
 ---
 
 ## Research Questions
@@ -26,14 +28,15 @@ This work addresses two complementary prediction problems:
 
 *Can lap times be accurately predicted within a single race when full contextual information is available?*
 
-This setting assumes knowledge of the circuit, drivers, and race conditions. It represents an upper bound on achievable performance and measures how well short-term lap dynamics can be modeled.
+This setting assumes knowledge of the circuit, drivers, and race conditions. It represents an upper bound on achievable performance and measures how well short-term lap dynamics can be modeled when persistent driver- and circuit-specific effects are observed.
 
 ### 2. Cross-Circuit Generalization
 
 *Can lap time dynamics be predicted on circuits not seen during training?*
 
-This setting removes circuit-specific information and evaluates whether models can generalize across tracks, capturing transferable relationships rather than memorizing track characteristics.
+This setting removes circuit-specific information and evaluates whether models can generalize across tracks. It represents a fundamentally different learning problem, in which persistent circuit- and driver-specific effects are intentionally removed so that the model must rely on transferable performance signals rather than memorization.
 
+The one-lap-ahead horizon is chosen as the shortest interval at which strategic decisions (pace control, tyre management, pit timing) can realistically react to updated information.
 ---
 
 ## Table of Contents
@@ -64,7 +67,7 @@ This setting removes circuit-specific information and evaluates whether models c
 
 ## Feature Engineering
 
-Features are built at the lap level and grouped into four categories:
+All features are strictly causal: for each lap t, only information available up to and including lap t is used. Any variables derived from future laps (e.g., final stint length, post-race aggregates) are explicitly excluded.
 
 ### Tyre & Stint
 - Compound (SOFT, MEDIUM, HARD)
@@ -86,11 +89,24 @@ Features are built at the lap level and grouped into four categories:
 - Straight lengths and DRS zones
 - Corner angles and speed profiles
 
-**Target variable**: Next-lap time 
+### Target Variables
+
+Two closely related but distinct prediction targets are used:
+
+- **Within-race target (RQ1)**:  
+  Absolute next-lap time  
+  \( y_{t}^{(R)} = \mathrm{LapTime}_{t+1} \)
+
+- **Cross-circuit target (RQ2)**:  
+  Next-lap time conditioned on strictly transferable information, with no access to circuit identity or race-specific fixed effects.
+
+While both targets are expressed in seconds, they correspond to different information sets and generalization objectives, and should not be interpreted interchangeably.
 
 ---
 
-## Modeling Setup
+## Modeling Setup and Information Availability
+
+Each modeling setting corresponds to a different information set, allowing us to distinguish between memorization-driven accuracy and genuinely transferable predictability.
 
 ### Per-Race Models
 - **Objective**: Predict lap times within a single race
@@ -141,6 +157,8 @@ Per-race prediction is extremely accurate, driven largely by driver- and team-sp
 | **Random Forest** | **Tyre + Weather + State** | **0.335** | **0.486** | **0.338** |
 | **Random Forest** | **+ Geometry** | **0.333** | **0.484** | **0.342** |
 | Hist. Gradient Boosting | Tyre + Weather + State | 0.335 | 0.499 | 0.302 |
+
+Note: Performance metrics across per-race and per-circuit settings are not directly comparable due to differing targets and information sets.
 
 ---
 
@@ -231,19 +249,21 @@ jupyter notebook Nonlinear.ipynb
 ## Limitations & Future Work
 
 ### Current Limitations
-- CatBoost overfits despite good cross-validation scores
-- Geometry features hurt linear models (multicollinearity)
-- Driver/Team effects don't transfer across circuits
+- **Reduced-form prediction**:  
+  The models predict lap times directly, which reflect a mixture of tyre degradation, driver intent, fuel effects, and race strategy. Results should therefore be interpreted as predictive rather than causal.
 
+- **Limited cross-circuit sample**:  
+  Strict circuit-disjoint evaluation leaves a small number of held-out tracks, implying non-negligible uncertainty in generalization estimates.
+
+- **Coarse circuit representation**:  
+  Geometry features are high-level summaries and may not fully capture track-specific performance demands.
 
 ### Future Directions
-- Ensemble stacking (combine per-race and per-circuit models)
-- Deep learning (LSTM/Transformer for sequential prediction)
-- Causal inference (isolate tyre degradation from driver skill)
-- Real-time integration with live timing APIs
-- Explainability analysis (SHAP values)
+- Richer telemetry-based circuit descriptors
+- Sequential models (LSTM / Transformers) for multi-lap dynamics
+- Causal decomposition of tyre, driver, and strategy effects
+- Cross-era generalization across regulatory regimes
 
----
 
 ## Acknowledgments
 

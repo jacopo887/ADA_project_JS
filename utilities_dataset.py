@@ -6,13 +6,13 @@ Download was splitted into multiple parts due to API limitations.
 
 """
 
-# 1) The first part of this file will aim to  create a dataset with the circuit specifications , for all circuits that hoested a grand prix from 2023 to 2025.
+# 1) The first part of this file aim to create a dataset with the circuit specifications , for all circuits that hoested a grand prix from 2023 to 2025.
 
-# 2) Then from this dataset we will construct a subset with the unique circuits plus drs dervied features( 1017- 1096).
+# 2) Then from this dataset we will construct a subset with the unique circuits plus drs dervied features( 1025- 1440).
 
-# 3) From the cached data we will build the second dataset containg lap times weather gap to position ahed etc.( 1420 )
+# 3) From the cached data we will build the second dataset containg lap times weather gap to position ahed etc.( 1440- 2130).
 
-# 4) From OpenF1 API we will get the  Race control Data fot the same years, and merge them with the lap times dataset( line 2120).
+# 4) From OpenF1 API we will get the  Race control, PitStop and Stint Data fot the same years, and merge them with the lap times dataset( line 2130).
 
 
 
