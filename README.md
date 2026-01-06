@@ -1,6 +1,6 @@
-# Formula 1 Lap Time Prediction
+# Short-Horizon Lap Time Prediction and Cross Circuit Generalization in Formula 1 
 
-**Machine Learning–Based Modeling of Race Performance**
+**Modeling performance and generalization across circuits**
 
 ![Formula 1 Lap Time Prediction](figures/Readmeimage.jpg)
 
@@ -91,16 +91,27 @@ All features are strictly causal: for each lap t, only information available up 
 
 ### Target Variables
 
-Two closely related but distinct prediction targets are used:
+Two related but conceptually distinct prediction targets are used, corresponding to different generalization objectives.
 
-- **Within-race target (RQ1)**:  
-  Absolute next-lap time  
-  \( y_{t}^{(R)} = \mathrm{LapTime}_{t+1} \)
+- **Within-race target (RQ1)**  
+  Absolute next-lap time, defined as:
+  
+  \[
+  y_t^{(R)} = \mathrm{LapTime}_{t+1}
+  \]
 
-- **Cross-circuit target (RQ2)**:  
-  Next-lap time conditioned on strictly transferable information, with no access to circuit identity or race-specific fixed effects.
+  This target captures short-horizon lap time evolution within a fixed race context, where persistent driver-, car-, and circuit-specific effects are observable.
 
-While both targets are expressed in seconds, they correspond to different information sets and generalization objectives, and should not be interpreted interchangeably.
+- **Cross-circuit target (RQ2)**  
+  Deviation of the next-lap time from the average lap time of the current stint observed up to lap \( t \):
+  
+  \[
+  y_t^{(C)} = \mathrm{LapTime}_{t+1} - \overline{\mathrm{LapTime}}_{\text{stint}, \le t}
+  \]
+
+  This transformation removes circuit-specific scale effects and race-level baselines, forcing models to rely exclusively on transferable performance signals such as tyre degradation, weather variation, and race-state dynamics.
+
+While both targets are expressed in seconds, they correspond to different estimands and learning problems and should not be interpreted interchangeably. Performance metrics across the two settings are therefore not directly comparable.
 
 ---
 
