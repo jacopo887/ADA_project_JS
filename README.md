@@ -96,18 +96,14 @@ Two related but conceptually distinct prediction targets are used, corresponding
 - **Within-race target (RQ1)**  
   Absolute next-lap time, defined as:
   
-  \[
-  y_t^{(R)} = \mathrm{LapTime}_{t+1}
-  \]
+  y_t^(R) = LapTime_{t+1}
 
   This target captures short-horizon lap time evolution within a fixed race context, where persistent driver-, car-, and circuit-specific effects are observable.
 
 - **Cross-circuit target (RQ2)**  
   Deviation of the next-lap time from the average lap time of the current stint observed up to lap \( t \):
   
-  \[
-  y_t^{(C)} = \mathrm{LapTime}_{t+1} - \overline{\mathrm{LapTime}}_{\text{stint}, \le t}
-  \]
+  y_t^(C) = LapTime_{t+1} − mean(LapTime_stint, ≤ t)
 
   This transformation removes circuit-specific scale effects and race-level baselines, forcing models to rely exclusively on transferable performance signals such as tyre degradation, weather variation, and race-state dynamics.
 
