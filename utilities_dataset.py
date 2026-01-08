@@ -1,6 +1,6 @@
 
 """ 
-In this module there is a part( line 187-214) which is commented out because we already downloaded the data and cached it.
+In this module there is a part( line 198-230) which is commented out because we already downloaded the data and cached it.
 However, if you need to re-download or update the cache, you can uncomment that section.
 Download was splitted into multiple parts due to API limitations.
 
@@ -249,7 +249,7 @@ def get_race_schedule_from_cache(year: int, cache_dir: str = "./cache") -> pd.Da
     year_path = os.path.join(cache_dir, str(year))
     
     if not os.path.exists(year_path):
-        print(f"  ⚠️  No cache folder found for {year}")
+        print(f" No cache folder found for {year}")
         return pd.DataFrame()
     
     schedules = []
@@ -1025,14 +1025,7 @@ def summarize_circuit(year, circuit_name, official_length_km=None, curvature_thr
 # Geometry changes for circuits
 
 GEOMETRY_CHANGES = {
-    # 'yas-marina': {
-    #     'change_year': 2021,
-    #     'description': 'Chicane removed, reprofiled hairpin; 21→19 turns'
-    # },
-    # 'melbourne': {
-    #     'change_year': 2022,
-    #     'description': 'T9/10 chicane removed, corners widened, full resurface'
-    # },
+  
     'catalunya': {
         'change_year': 2023,
         'description': 'Final chicane removed; lap 4.657 km'
@@ -1041,10 +1034,7 @@ GEOMETRY_CHANGES = {
         'change_year': 2023,
         'description': 'Float section removed; 23→19 corners; lap 4.928 km'
      },
-    # 'zandvoort': {
-    #     'change_year': 2021,
-    #     'description': 'Banked T3 & T14; new 4.259 km GP layout'
-    # },
+
 }
 
 
